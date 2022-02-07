@@ -1,0 +1,20 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+# config/routes.yaml
+
+# the "app_lucky_number" route name is not important yet
+app_lucky_number:
+  path: /lucky/number
+  controller: App\Controller\LuckyController::number
+
+api_login_check:
+  path: /api/login_check
+# config/routes.yaml
+app_logout:
+  path: /logout
+  methods: GET
+
+  # if the action is implemented as the __invoke() method of the
+  # controller class, you can skip the '::method_name' part:
+  # controller: App\Controller\BlogController

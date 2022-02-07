@@ -1,0 +1,122 @@
+{% block body %}
+    <style>
+        .header-info {
+            margin-top: 30px;
+            font-size: 16px;
+            color: white;
+            padding-right: 100px;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        .header-info > a {
+            text-decoration: none;
+            color: black;
+            margin-left: 30px;
+        }
+
+        .nav > li > a {
+            color: white;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            font-weight: bold;
+        }
+
+        .nav > li {
+            padding-top: 21px;
+            padding-bottom: 20px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .row.content {
+                height: auto;
+            }
+        }
+
+        .header-info button {
+            font-size: 16px;
+            border-radius: 20px;
+            border: 2px solid black;
+            background-color: transparent;
+            padding: 10px 15px;
+            margin-left: 20px;
+            transition: 0.2s ease;
+            cursor: pointer;
+        }
+
+        .header-info button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #376e32;
+            height: 60px;
+        }
+
+        .phone {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .logo > img {
+            border: 0;
+            height: 55px;
+            width: 55px;
+        }
+
+        .logo {
+            padding-left: 100px;
+            color: black;
+            font-size: 36px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+    {% if app.user %}
+        <nav class="navbar">
+            <div class="header-top">
+                <div class="logo"><img src="https://clipart-best.com/img/letter-g/letter-g-clip-art-3.png"/>
+                    <a href=/index><span style="color: black">Graf Griffon</span></a></div>
+                <div class="header-info">
+                    <form action="/logout" method="get">
+                        <span class="phone" style="color: black;">{{ app.user.username }} {{ app.user.firstname }} {{ app.user.lastname }}</span>
+                        <button type="submit">Logout</button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+    {% else %}
+        <nav class="navbar">
+            <div class="header-top">
+                <div class="logo"><img src="https://clipart-best.com/img/letter-g/letter-g-clip-art-3.png"/>
+                    <a href=/index><span style="color: black">Graf Griffon</span></a></div>
+
+                <div class="header-info">
+                    <form action="/login" method="get">
+                        <span class="phone" style="color: black;">Unregistered user</span>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    {% endif %}
+
+{% endblock %}
