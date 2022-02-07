@@ -1,0 +1,51 @@
+{% block body %}
+    {{ include('header.html.twig') }}
+
+    {#    {{ dump(params) }} #}
+    {#    <form method="post" action="#"> #}
+    {#        <input type = "text" name = "firstname" value = "" placeholder="firstname"> #}
+    {#        <input type = "submit" name = "submit" value = "Отправить"> #}
+    {#    </form> #}
+    <style>
+        * {box-sizing: border-box}
+
+        button.form-adding,
+        select.form-adding,
+        input.form-adding{
+            background-color: #eae5e5;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            margin: 5px 0;
+            opacity: 0.85;
+            display: inline-block;
+            font-size: 17px;
+            line-height: 20px;
+            text-decoration: none; /* remove underline from anchors */
+        }
+
+        input.form-adding:hover,
+        button.form-adding:hover,
+        select.form-adding,:hover{
+            opacity: 1;
+        }
+
+        input[type=submit] {
+            background-color: #46853e;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #376e32;
+        }
+    </style>
+    {{ form_start(form) }}
+    {{ form_row(form.title) }}
+    {{ form_row(form.parent) }}
+    <input type="submit" name="submit" class="form-adding" value="Send">
+    {{ form_end(form) }}
+
+    {{ include('footer.html.twig') }}
+{% endblock %}

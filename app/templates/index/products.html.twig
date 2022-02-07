@@ -1,0 +1,75 @@
+<head>
+    <meta charset="utf-8">
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%; /* Ширина таблицы */
+            background: white; /* Цвет фона таблицы */
+            color: white; /* Цвет текста */
+            border-spacing: 1px; /* Расстояние между ячейками */
+        }
+
+        td, th {
+            background: #376e32; /* Цвет фона ячеек */
+            padding: 5px; /* Поля вокруг текста */
+        }
+
+        .close:before, .close:after {
+            position: absolute;
+            content: ' ';
+            margin-top: -10px;
+            height: 16px;
+            width: 2px;
+            background-color: #333;
+        }
+
+        .close:before {
+            transform: rotate(45deg);
+        }
+
+        .close:after {
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+{{ include('header.html.twig') }}
+<title>Category</title>
+<table style="margin-top: 20px; margin-bottom: 20px">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Count</th>
+        <th>Category</th>
+        {% if app.user %}
+            <th></th>{% endif %}
+    </tr>
+    {% for element in elements %}
+        <form action={{ "/delete-product/"~element.id }} method="post">
+            <tr>
+                <td>{{ element.name }}</td>
+                <td>{{ element.currPrice }}</td>
+                <td>{{ element.statusCount }}</td>
+                <td>{{ element.category.title }}</td>
+                {% if app.user %}
+                <td style="width: 16px">
+                    <button class="close" style="
+    height: 18px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;"></button>
+                </td>
+            </tr>
+            {% endif %}
+        </form>
+    {% endfor %}
+</table>
+{% if page>1 %}
+    <a href={{ url ~ '?page='~ (page-1) }}><span style="color: black">Back</span></a>
+{% endif %}
+<a href={{ url ~ '?page='~ (page+1) }}><span style="color: black">Next</span></a>
+{{ include('footer.html.twig') }}
+</body>
