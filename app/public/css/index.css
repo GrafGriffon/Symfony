@@ -1,0 +1,23 @@
+div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+a.category {
+    color: white;
+    background-color: #376e32;
+    box-shadow: 0 5px 0 #225720;
+    padding: 5px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.category:hover {
+    background-color: #225720;
+    cursor: pointer;
+}
+
+a.category:active {
+    box-shadow: none;
+    top: 5px;
+}
