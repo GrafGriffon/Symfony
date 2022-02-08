@@ -26,7 +26,8 @@ class Category
     #[ORM\OneToMany(targetEntity: "Products", mappedBy: "category")]
     private $product;
 
-    public function __toString() {
+    public function __toString()
+    {
         return $this->id;
     }
 
@@ -72,7 +73,7 @@ class Category
 
     public function getParent(): Category
     {
-        if($this->parent==null){
+        if ($this->parent == null) {
             return new Category();
         }
         return $this->parent;

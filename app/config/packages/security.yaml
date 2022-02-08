@@ -16,7 +16,6 @@ security:
                 property: email
         # used to reload user from session & other features (e.g. switch_user)
     firewalls:
-
         login:
             pattern: ^/api/login
             stateless: true

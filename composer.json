@@ -4,7 +4,8 @@
         "lexik/jwt-authentication-bundle": "^2.14",
         "symfony/form": "^5.4",
         "symfony/orm-pack": "^2.2",
-        "sensio/framework-extra-bundle": "^6.2"
+        "sensio/framework-extra-bundle": "^6.2",
+        "symfony/asset": "^5.4"
     },
     "require-dev": {
         "symfony/maker-bundle": "^1.36"

@@ -1,38 +1,4 @@
-<head>
-    <meta charset="utf-8">
-    <style>
-        table {
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%; /* Ширина таблицы */
-            background: white; /* Цвет фона таблицы */
-            color: white; /* Цвет текста */
-            border-spacing: 1px; /* Расстояние между ячейками */
-        }
-
-        td, th {
-            background: #376e32; /* Цвет фона ячеек */
-            padding: 5px; /* Поля вокруг текста */
-        }
-
-        .close:before, .close:after {
-            position: absolute;
-            content: ' ';
-            margin-top: -10px;
-            height: 16px;
-            width: 2px;
-            background-color: #333;
-        }
-
-        .close:before {
-            transform: rotate(45deg);
-        }
-
-        .close:after {
-            transform: rotate(-45deg);
-        }
-    </style>
-</head>
+<link href="{{ asset('css/product.css') }}" rel="stylesheet" />
 <body>
 {{ include('header.html.twig') }}
 <title>Category</title>
