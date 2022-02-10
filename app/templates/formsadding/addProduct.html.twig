@@ -1,5 +1,10 @@
 {% block body %}
     {{ include('header.html.twig') }}
+    {% for message in app.flashes('info') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
 
     {#    {{ dump(params) }} #}
     {#    <form method="post" action="#"> #}

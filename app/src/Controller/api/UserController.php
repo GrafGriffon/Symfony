@@ -29,7 +29,7 @@ class UserController extends AbstractController
      * @param UserRepository $postRepository
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/posts", name="posts_add", methods={"POST"})
+     * @Route("/add-user", name="user_add", methods={"POST"})
      */
     public function addUsr(Request $request, EntityManagerInterface $entityManager, UserRepository $postRepository)
     {
@@ -70,26 +70,18 @@ class UserController extends AbstractController
      * @param UserRepository $repository
      * @param $id
      * @return JsonResponse
-     * @Route("/posts/{id}", name="posts_put", methods={"PUT"})
+     * @Route("/update-user/{user}", name="user_put", methods={"PUT"})
      */
-    public function updatePost(Request $request, EntityManagerInterface $entityManager, UserRepository $repository, $id)
+    public function updateUser(Request $request, EntityManagerInterface $entityManager, User $user)
     {
-
         try {
-            $post = $repository->find($id);
-
-            if (!$post) {
-                $data = [
-                    'status' => 404,
-                    'errors' => "Post not found",
-                ];
-                return new JsonResponse($data, 404);
-
-            }
-
             $request = $this->transformJsonBody($request);
 
-            $post->setEmail($request->get('mail'));
+            $user
+                ->setEmail($request->get('mail'))
+                ->setRoles([$request->get('role')])
+                ->setFirstName($request->get('first'))
+                ->setLastName($request->get('last'));
             $entityManager->flush();
 
             $data = [
@@ -107,6 +99,56 @@ class UserController extends AbstractController
             return new JsonResponse($data, 422);
         }
 
+    }
+
+
+    /**
+     * @return JsonResponse
+     * @Route("/delete-user/{user}", name="user_delete", methods={"DELETE"})
+     */
+    public function deleteUser(EntityManagerInterface $entityManager, User $user)
+    {
+        $entityManager->remove($user);
+        $entityManager->flush();
+        $data = [
+            'status' => 200,
+            'errors' => "Post deleted successfully",
+        ];
+        return new JsonResponse($data);
+    }
+
+    /**
+     * @return JsonResponse
+     * @Route("/user/{user}", name="user-id-view", methods={"GET"})
+     */
+    public function viewUser(User $user)
+    {
+        $data = [
+            'email' => $user->getEmail(),
+            'role' => $user->getRoles(),
+            'fname' => $user->getFirstName(),
+            'lname' => $user->getLastName()
+        ];
+        return new JsonResponse($data);
+    }
+
+    /**
+     * @return JsonResponse
+     * @Route("/user/", name="user-view", methods={"GET"})
+     */
+    public function viewUsers(UserRepository $repository)
+    {
+        $users = $repository->findAll();
+        $data = array();
+        foreach ($users as $user) {
+            $data[] = [
+                'email' => $user->getEmail(),
+                'role' => $user->getRoles(),
+                'fname' => $user->getFirstName(),
+                'lname' => $user->getLastName()
+            ];
+        }
+        return new JsonResponse($data);
     }
 
 

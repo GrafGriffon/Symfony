@@ -6,15 +6,16 @@ use App\Entity\CountHist;
 use App\Entity\PriceHist;
 use App\Entity\Products;
 use App\Repository\CategoryRepository;
-use App\Repository\PostRepository;
 use App\Repository\ProductsRepository;
 use App\Repository\UserRepository;
+use App\Validation\ProductValidator;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Exception\ValidatorException;
 
 /**
  * Class PostController
@@ -52,6 +53,11 @@ class ProductController extends AbstractController
 
         try {
             $request = $this->transformJsonBody($request);
+            $errors = (new ProductValidator())->validate($request->request->all());
+            if (!empty($errors)) {
+                throw new ValidatorException('Введённые данные некорректны: ' . implode('; ', $errors));
+            }
+
             $product = (new Products())
                 ->setName($request->get('name'))
                 ->setStatusCount($request->get('count'))
@@ -121,6 +127,7 @@ class ProductController extends AbstractController
 
             }
 
+
             if ($request->get('price') != $product->getCurrPrice()) {
                 $priceHist = (new PriceHist())
                     ->setCurrentPrice($product->getCurrPrice())
@@ -128,7 +135,6 @@ class ProductController extends AbstractController
                     ->setdelta($request->get('price') - $product->getCurrPrice())
                     ->setProduct($product);
                 $entityManager->persist($priceHist);
-                $entityManager->flush();
             }
             if ($request->get('count') != $product->getStatusCount()) {
 
@@ -138,10 +144,14 @@ class ProductController extends AbstractController
                     ->setdelta($request->get('count') - $product->getStatusCount())
                     ->setProduct($product);
                 $entityManager->persist($countHist);
-                $entityManager->flush();
             }
 
             $request = $this->transformJsonBody($request);
+            $request = $this->transformJsonBody($request);
+            $errors = (new ProductValidator())->validate($request->request->all());
+            if (!empty($errors)) {
+                throw new ValidatorException('Введённые данные некорректны: ' . implode('; ', $errors));
+            }
             $product
                 ->setName($request->get('name'))
                 ->setStatusCount($request->get('count'))

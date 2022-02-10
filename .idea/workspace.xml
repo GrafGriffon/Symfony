@@ -5,9 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c2e0db2-78a6-4fa3-8152-9c063aa323a2" name="Changes" comment="new commit">
+      <change afterPath="$PROJECT_DIR$/app/src/Controller/forms/AccountController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Controller/forms/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Controller/pages/AdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Controller/pages/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Form/UserForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Handler/GetSubcategories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Security/UserAuthenticator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Validation/AbstractValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Validation/CategoryValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Validation/ProductValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/admin/categories.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/admin/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/admin/main.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/formsadding/addUser.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Symfony.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/api/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/api/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/api/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/api/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/forms/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/forms/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/forms/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/forms/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/pages/CatalogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/pages/CatalogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/security/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/security/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/Load_200_UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/DataFixtures/Load_200_UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Form/CategoryForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Form/CategoryForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Handler/AddPriceHistoryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Handler/AddPriceHistoryHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/formsadding/addProduct.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/formsadding/addProduct.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index/products.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index/products.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,19 +95,25 @@
     <setting file="file://$PROJECT_DIR$/docker/nginx/Dockerfile" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/config/services.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docker/nginx/default.conf" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Security/AuthenticationEntryPoint.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/config/bundles.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/config/routes.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/config/packages/framework.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/Controller/pages/CatalogController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/Controller/pages/IndexController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/forms/CategoryController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/.env" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/Entity/Category.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/templates/formsadding/addProduct.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/Load_001_CategoryFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Form/ProductForm.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1cebe851-93dc-45ca-9eb6-9e3583414df4/console.sql" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/templates/index/index.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/Load_100_ProductsFixures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/AppFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/Load_200_UserFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/security/UserAuthSecurityController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/templates/index/products.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/templates/security/login.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
@@ -75,90 +126,94 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/app/vendor/composer" />
-      <path value="$PROJECT_DIR$/app/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/app/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/app/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/app/vendor/psr/cache" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/flex" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/var-exporter" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/dependency-injection" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/dotenv" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/runtime" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/cache" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/config" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php81" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/cache-contracts" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/framework-bundle" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/app/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/app/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/app/vendor/lexik/jwt-authentication-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/twig/extra-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/twig-bridge" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/twig-bundle" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/app/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/maker-bundle" />
-      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-code" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/stopwatch" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/doctrine-bridge" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/proxy-manager-bridge" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/persistence" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/doctrine-migrations-bundle" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/collections" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/migrations" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/common" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/doctrine-bundle" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/sql-formatter" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/deprecations" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/dbal" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/event-manager" />
-      <path value="$PROJECT_DIR$/app/vendor/doctrine/cache" />
-      <path value="$PROJECT_DIR$/app/vendor/friendsofphp/proxy-manager-lts" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/security-guard" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/security-bundle" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/property-access" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/property-info" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/password-hasher" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/security-csrf" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/security-core" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/app/vendor/composer" />
       <path value="$PROJECT_DIR$/app/vendor/symfonycasts/verify-email-bundle" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/validator" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-icu" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/options-resolver" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/form" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/web-profiler-bundle" />
-      <path value="$PROJECT_DIR$/app/vendor/lexik/jwt-authentication-bundle" />
-      <path value="$PROJECT_DIR$/app/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/app/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/app/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/app/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/app/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/common" />
       <path value="$PROJECT_DIR$/app/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/app/vendor/doctrine/data-fixtures" />
-      <path value="$PROJECT_DIR$/app/vendor/fzaninotto/faker" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/proxy-manager-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/app/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/knplabs/knp-components" />
     </include_path>
   </component>
   <component name="ProjectId" id="23uwgIIcD5xICZMwzMpDzwNtDzL" />
@@ -172,7 +227,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/app/vendor/symfony/http-foundation/Request.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/templates/admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -180,16 +236,16 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/Form" />
-      <recent name="$PROJECT_DIR$/app/src/Controller/forms" />
+      <recent name="$PROJECT_DIR$/app/templates/admin" />
       <recent name="$PROJECT_DIR$/app/templates/formsadding" />
-      <recent name="$PROJECT_DIR$/app/templates" />
-      <recent name="$PROJECT_DIR$/app/templates/index" />
+      <recent name="$PROJECT_DIR$/app/src/Form" />
+      <recent name="$PROJECT_DIR$/app/src/Validation" />
+      <recent name="$PROJECT_DIR$/app/src/Security" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/Controller/forms" />
@@ -255,7 +311,17 @@
       <workItem from="1644306958371" duration="586000" />
       <workItem from="1644307563565" duration="442000" />
       <workItem from="1644308008955" duration="62000" />
-      <workItem from="1644308072084" duration="308000" />
+      <workItem from="1644308072084" duration="631000" />
+      <workItem from="1644308753237" duration="1096000" />
+      <workItem from="1644309872585" duration="1479000" />
+      <workItem from="1644311599747" duration="8055000" />
+      <workItem from="1644325094044" duration="3611000" />
+      <workItem from="1644334200811" duration="2382000" />
+      <workItem from="1644339904521" duration="6000" />
+      <workItem from="1644348392607" duration="29000" />
+      <workItem from="1644386974767" duration="15762000" />
+      <workItem from="1644412187250" duration="6023000" />
+      <workItem from="1644473292454" duration="22107000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1644234064073</created>
@@ -285,7 +351,21 @@
       <option name="project" value="LOCAL" />
       <updated>1644307832143</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new commit">
+      <created>1644308383306</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644308383306</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new commit">
+      <created>1644308395815</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644308395815</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use App\Repository\ProductsRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -19,6 +20,7 @@ class Products
     private $name;
 
     #[ORM\Column(type: 'integer')]
+    #[Assert\Length(min: 2, max: 3)]
     private $statusCount;
 
     #[ORM\Column(type: 'integer')]
@@ -35,7 +37,6 @@ class Products
 
     #[ORM\ManyToOne(targetEntity: "Category", inversedBy: "product")]
     #[ORM\JoinColumn(name:"category", onDelete: 'CASCADE')]
-
     private $category;
 
     public function __construct()

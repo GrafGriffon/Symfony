@@ -3,8 +3,11 @@
 namespace App\Controller\pages;
 
 use App\Entity\Category;
-use App\Entity\Products;
+use App\Handler\GetSubcategories;
+use App\Repository\CategoryRepository;
 use App\Repository\ProductsRepository;
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,57 +20,19 @@ class CatalogController extends AbstractController
     /**
      * @Route("/{category}", name="show_products", methods={"GET"})
      */
-    public function show(int $category, ProductsRepository $repository): Response
+    public function show(int $category, Request $request, ProductsRepository $repository, CategoryRepository $categoryRepository, PaginatorInterface $paginator): Response
     {
-        $categories = [$category];
-        $categories = $this->printIndex($category, $categories);
-        $products = $repository->findAll();
+        $categories = GetSubcategories::printIndex($category, [$category], $categoryRepository);
 
-
-        $query = $repository->createQueryBuilder('u')
-            ->where('u.category in (' . implode(", ", $categories) . ')')
-            ->getQuery();
-        $pageSize = '5';
-        if (isset($_GET['page'])) {
-            $page = $_GET['page'];
-        } else {
-            foreach ($query->getResult() as $element) {
-                $arrayOutput[] = $element;
-            }
-            return $this->render('index/products.html.twig', [
-                'elements' => $arrayOutput,
-                'page' => 0,
-                'url' => stristr($_SERVER['REQUEST_URI'], '?', true)
-            ]);
-        }
-        $paginator = new \Doctrine\ORM\Tools\Pagination\Paginator($query);
-        $totalItems = count($paginator);
-        $pagesCount = ceil($totalItems / $pageSize);
-        $paginator
-            ->getQuery()
-            ->setFirstResult($pageSize * ($page - 1)) // set the offset
-            ->setMaxResults($pageSize); // set the limit
-
-        $arrayOutput = array();
-        foreach ($paginator as $element) {
-            $arrayOutput[] = $element;
-        }
+        $products = $paginator->paginate(
+            $repository->createQueryBuilder('u')
+                ->where('u.category in (' . implode(", ", $categories) . ')')
+                ->getQuery(),
+            $request->query->getInt('page', 1),
+            20
+        );
         return $this->render('index/products.html.twig', [
-            'elements' => $arrayOutput,
-            'page' => $page,
-            'url' => stristr($_SERVER['REQUEST_URI'], '?', true)
+            'elements' => $products
         ]);
-    }
-
-    function printIndex(int $idParent, array $categories): array
-    {
-        $category = $this->getDoctrine()->getRepository(Category::class)->findAll();
-        foreach ($category as $item) {
-            if ($item->getParent()->getId() == $idParent) {
-                $categories[] = $item->getID();
-                $categories = $this->printIndex($item->getId(), $categories);
-            }
-        }
-        return $categories;
     }
 }

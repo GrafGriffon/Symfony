@@ -5,11 +5,14 @@ namespace App\Controller\api;
 use App\Entity\Category;
 use App\Repository\CategoryRepository;
 use App\Repository\UserRepository;
+use App\Validation\CategoryValidator;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Exception\ValidatorException;
 
 /**
  * Class PostController
@@ -21,11 +24,11 @@ class CategoryController extends AbstractController
     /**
      * @param CategoryRepository $productRepository
      * @return JsonResponse
-     * @Route("/categories/{page}", name="categories", methods={"GET"})
+     * @Route("/categories", name="categories", methods={"GET"})
      */
-    public function getCategories(CategoryRepository $categoryRepository, int $page)
+    public function getCategories(PaginatorInterface $paginator, Request $request, CategoryRepository $categoryRepository)
     {
-        $paginator = $categoryRepository->getListCategory($categoryRepository, $page);
+        $paginator = $categoryRepository->getListCategory($categoryRepository, $paginator, $request);
         $categories = array();
         foreach ($paginator as $category) {
             $categories[] = [
@@ -41,9 +44,9 @@ class CategoryController extends AbstractController
      * @return JsonResponse
      * @Route("/subcategories/{category}", name="subcategories", methods={"GET"})
      */
-    public function getSubcategories(CategoryRepository $categoryRepository, int $category)
+    public function getSubcategories(CategoryRepository $categoryRepository, int $category, PaginatorInterface $paginator, Request $request)
     {
-        $paginator = $categoryRepository->getSubcategories($categoryRepository, $category);
+        $paginator = $categoryRepository->getSubcategories($categoryRepository, $category, $paginator, $request);
 
         $categories = array();
         foreach ($paginator as $category) {
@@ -69,6 +72,12 @@ class CategoryController extends AbstractController
 
         try {
             $request = $this->transformJsonBody($request);
+            $errors = (new CategoryValidator())->validate($request->request->all());
+
+            if (!empty($errors)) {
+                throw new ValidatorException('Введённые данные некорректны: ' . implode('; ', $errors));
+            }
+
             $category = (new Category())
             ->setTitle($request->get('title'))
             ->setParent($repository->find($request->get('parent')))
@@ -121,6 +130,11 @@ class CategoryController extends AbstractController
             }
 
             $request = $this->transformJsonBody($request);
+            $errors = (new CategoryValidator())->validate($request->request->all());
+
+            if (!empty($errors)) {
+                throw new ValidatorException('Введённые данные некорректны: ' . implode('; ', $errors));
+            }
             $category
                 ->setTitle($request->get('title'))
                 ->setParent($repository->find($request->get('parent')))

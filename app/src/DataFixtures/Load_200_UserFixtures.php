@@ -15,7 +15,7 @@ class Load_200_UserFixtures extends AppFixtures
                 ->setFirstName($this->generator->firstName)
                 ->setLastName($this->generator->lastName)
                 ->setPassword($this->generator->password)
-                ->setRoles((array)'ROLE_ADMIN')
+                ->setRoles(['ROLE_ADMIN'])
                 ->setStatus($this->generator->numberBetween(0, 1));
             $manager->persist($user);
         }

@@ -3,8 +3,11 @@
 namespace App\Repository;
 
 use App\Entity\Category;
+use App\Handler\GetSubcategories;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @method Category|null find($id, $lockMode = null, $lockVersion = null)
@@ -19,85 +22,24 @@ class CategoryRepository extends ServiceEntityRepository
         parent::__construct($registry, Category::class);
     }
 
-    public function getListCategory(CategoryRepository $categoryRepository, int $page){
-        $query = $categoryRepository->createQueryBuilder('u')
-            ->getQuery();
-        $pageSize = '5';
-        $paginator = new \Doctrine\ORM\Tools\Pagination\Paginator($query);
-        $totalItems = count($paginator);
-        $pagesCount = ceil($totalItems / $pageSize);
-        $paginator
-            ->getQuery()
-            ->setFirstResult($pageSize * ($page - 1)) // set the offset
-            ->setMaxResults($pageSize); // set the limit
-
-        $categories = array();
-        return $paginator;
-    }
-
-
-
-    public function getSubcategories(CategoryRepository $categoryRepository, int $category)
+    public function getListCategory(CategoryRepository $categoryRepository, PaginatorInterface $paginator, Request $request)
     {
-        $categories = [$category];
-        $categories = $this->printIndex($category, $categories, $categoryRepository);
-        $query = $categoryRepository->createQueryBuilder('u')
-            ->where('u.id in (' . implode(", ", $categories) . ')')
-            ->getQuery();
-        $pageSize = '2';
-        $paginator = new \Doctrine\ORM\Tools\Pagination\Paginator($query);
-        $totalItems = count($paginator);
-        $pagesCount = ceil($totalItems / $pageSize);
-        if (isset($_GET['page'])) {
-            $page = $_GET['page'];
-        } else {
-            $page = 1;
-        }
-        $paginator
-            ->getQuery()
-            ->setFirstResult($pageSize * ($_GET['page'] - 1)) // set the offset
-            ->setMaxResults($pageSize); // set the limit
-        return $paginator;
+        return $paginator->paginate(
+            $categoryRepository->findAll(),
+            $request->query->getInt('page', 1),
+            10
+        );
     }
 
-    function printIndex(int $idParent, array $categories, CategoryRepository $categoryRepository): array
-    {
-        $category = $categoryRepository->findAll();
-        foreach ($category as $item) {
-            if ($item->getParent()->getId() == $idParent) {
-                $categories[] = $item->getID();
-                $categories = $this->printIndex($item->getId(), $categories, $categoryRepository);
-            }
-        }
-        return $categories;
-    }
 
-    // /**
-    //  * @return Category[] Returns an array of Category objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function getSubcategories(CategoryRepository $categoryRepository, int $category, PaginatorInterface $paginator, Request $request)
     {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+        return $paginator->paginate(
+            $categoryRepository->createQueryBuilder('u')
+                ->where('u.id in (' . implode(", ", GetSubcategories::printIndex($category, [$category], $categoryRepository)) . ')')
+                ->getQuery(),
+            $request->query->getInt('page', 1),
+            10
+        );
     }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Category
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }

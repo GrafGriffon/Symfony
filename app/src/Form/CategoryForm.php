@@ -37,7 +37,7 @@ class CategoryForm extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'category_form' => Category::class,
+            'data_class' => Category::class,
         ]);
     }
 }

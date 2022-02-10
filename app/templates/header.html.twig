@@ -6,9 +6,10 @@
             <div class="header-top">
                 <div class="logo"><img src="https://clipart-best.com/img/letter-g/letter-g-clip-art-3.png"/>
                     <a href=/index><span style="color: black">Graf Griffon</span></a></div>
+                <a style="color: black" href={{'/admin/'}}> admin </a>
                 <div class="header-info">
                     <form action="/logout" method="get">
-                        <span class="phone" style="color: black;">{{ app.user.username }} {{ app.user.firstname }} {{ app.user.lastname }}</span>
+                        <span class="phone" style="color: black;"><a style="color: black" href={{'/user'}}> {{ app.user.username ~ " "~app.user.firstname ~" "~ app.user.lastname }} </a></span>
                         <button type="submit">Logout</button>
                     </form>
 

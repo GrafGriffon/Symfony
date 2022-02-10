@@ -3,11 +3,13 @@
 namespace App\Controller\forms;
 
 use App\Entity\Category;
+use App\Entity\User;
 use App\Form\CategoryForm;
 use App\Form\ProductForm;
 use App\Form\RegistrationFormType;
 use App\Repository\CategoryRepository;
 use App\Repository\ProductsRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -43,55 +45,11 @@ class CategoryController extends AbstractController
             ->setTitle($params['category_form']['title'])
             ->setParent($repository->find($params['category_form']['parent']))
             ->setLevel($repository->find($params['category_form']['parent'])->getLevel() + 1);
-        $entityManager->persist($category);
-        $entityManager->flush();
         $form = $this->createForm(CategoryForm::class);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            return $this->render('index/index.html.twig', [
-                'categories' => $repository->findAll(),
-                'idParent' => 0
-            ]);
-        }
-        return $this->render('formsadding/addCategory.html.twig', array(
-            'form' => $form->createView()
-        ));
-    }
-
-
-    /**
-     * @Route("category/{id}", name="show_category", methods={"GET"})
-     */
-    public function updateProductGet($id, CategoryRepository $repository, Request $request, EntityManagerInterface $entityManager): Response
-    {
-        $category = $repository->find($id);
-        if (!$category) {
-            $data = [
-                'status' => 404,
-                'errors' => "Post not found",
-            ];
-            //page error 404
-        }
-        $form = $this->createForm(CategoryForm::class, $category);
-        $form->handleRequest($request);
-        return $this->render('formsadding/addCategory.html.twig', array(
-            'form' => $form->createView()
-        ));
-    }
-
-    /**
-     * @Route("category/{id}", name="update_category", methods={"POST"})
-     */
-    public function updateProductPost(CategoryRepository $repository, Request $request, EntityManagerInterface $entityManager, $id): Response
-    {
-        $product = $repository->find($id);
-        $form = $this->createForm(CategoryForm::class, $product);
-        $form->handleRequest($request);
-        $categoryForm = $form->getData();
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            //$entityManager->persist($productForm);
+            $entityManager->persist($category);
             $entityManager->flush();
             return $this->render('index/index.html.twig', [
                 'categories' => $repository->findAll(),
@@ -101,5 +59,52 @@ class CategoryController extends AbstractController
         return $this->render('formsadding/addCategory.html.twig', array(
             'form' => $form->createView()
         ));
+    }
+
+
+    /**
+     * @Route("category/{category}", name="show_category", methods={"GET"})
+     */
+    public function viewCategory(Category $category, CategoryRepository $repository, Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $form = $this->createForm(CategoryForm::class, $category);
+        $form->handleRequest($request);
+        return $this->render('formsadding/addCategory.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+
+    /**
+     * @Route("category/{category}", name="update_category", methods={"POST"})
+     */
+    public function updateCategory(Category $category, CategoryRepository $repository, Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $form = $this->createForm(CategoryForm::class, $category);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $categoryForm = $form->getData();
+            $entityManager->flush();
+            return $this->render('index/index.html.twig', [
+                'categories' => $repository->findAll(),
+                'idParent' => 0
+            ]);
+        }
+        return $this->render('formsadding/addCategory.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+
+    /**
+     * @Route("delete-category/{category}", methods={"POST"})
+     */
+    public function deleteCategory(CategoryRepository $categoryRepository, EntityManagerInterface $entityManager, Category $category): Response
+    {
+        $entityManager->remove($category);
+        $entityManager->flush();
+        header('Location: http://localhost:8081/index/ ');
+        return $this->render('index/index.html.twig', [
+            'categories' => $categoryRepository->findAll(),
+            'idParent' => 0
+        ]);
     }
 }

@@ -1,0 +1,10 @@
+{% block body %}
+    {{ include('header.html.twig') }}
+    <link href="{{ asset('css/addproduct.css') }}" rel="stylesheet" />
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" name="submit" class="form-adding" value="Save">
+    {{ form_end(form) }}
+
+    {{ include('footer.html.twig') }}
+{% endblock %}

@@ -18,7 +18,7 @@ class AddPriceHistoryHandler
         $this->entityManager = $entityManager;
     }
 
-    public function addProductHist(Products $product, int $oldPrice, int $newPrice): void
+    public function addProductHist(Products $product, int $oldPrice): void
     {
         if ($oldPrice != $product->getCurrPrice()) {
             $priceHist = (new PriceHist())

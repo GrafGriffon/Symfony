@@ -1,41 +1,45 @@
-<link href="{{ asset('css/product.css') }}" rel="stylesheet" />
+<link href="{{ asset('css/product.css') }}" rel="stylesheet"/>
 <body>
 {{ include('header.html.twig') }}
 <title>Category</title>
 <table style="margin-top: 20px; margin-bottom: 20px">
+
     <tr>
         <th>Name</th>
         <th>Price</th>
         <th>Count</th>
         <th>Category</th>
         {% if app.user %}
-            <th></th>{% endif %}
+            <th><a style="font-size: 24px; color: black" href={{ '/product'}}> + </a></th>{% endif %}
     </tr>
     {% for element in elements %}
         <form action={{ "/delete-product/"~element.id }} method="post">
             <tr>
-                <td>{{ element.name }}</td>
+                {% if app.user %}
+                    <td><a class="category" style="color: white" href={{'/product/' ~ element.id }}> {{ element.name }} </a></td>
+                {% else %}
+                    <td>{{ element.name }}</td>
+                {% endif %}
                 <td>{{ element.currPrice }}</td>
                 <td>{{ element.statusCount }}</td>
                 <td>{{ element.category.title }}</td>
                 {% if app.user %}
-                <td style="width: 16px">
-                    <button class="close" style="
+                    <td style="width: 16px">
+                        <button class="close" style="
     height: 18px;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
     overflow: hidden;"></button>
-                </td>
+                    </td>
+                {% endif %}
             </tr>
-            {% endif %}
         </form>
     {% endfor %}
 </table>
-{% if page>1 %}
-    <a href={{ url ~ '?page='~ (page-1) }}><span style="color: black">Back</span></a>
-{% endif %}
-<a href={{ url ~ '?page='~ (page+1) }}><span style="color: black">Next</span></a>
+<div class="navigation">
+    {{ knp_pagination_render(elements) }}
+</div>
 {{ include('footer.html.twig') }}
 </body>
