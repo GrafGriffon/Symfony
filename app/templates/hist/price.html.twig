@@ -1,0 +1,26 @@
+<link href="{{ asset('css/product.css') }}" rel="stylesheet"/>
+<body>
+{{ include('header.html.twig') }}
+<title>Category</title>
+<table style="margin-top: 20px;">
+<th style="text-align: center">{{ elements[0].product.name }}</th>
+</table>
+<table style="margin-top: -1px; margin-bottom: 20px">
+    <tr>
+        <th>Price</th>
+        <th>Delta</th>
+        <th>Date</th>
+    </tr>
+    {% for element in elements %}
+        <tr>
+            <td>{{ element.currentPrice }}</td>
+            <td>{{ element.delta }}</td>
+            <td>{{ element.date|date('Y-m-d') }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<div class="navigation">
+    {{ knp_pagination_render(elements) }}
+</div>
+{{ include('footer.html.twig') }}
+</body>

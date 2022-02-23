@@ -12,8 +12,11 @@
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.11",
         "fzaninotto/faker": "^1.5",
+        "guzzlehttp/guzzle": "^7.4",
         "knplabs/knp-paginator-bundle": "^5.8",
         "lexik/jwt-authentication-bundle": "^2.14",
+        "phpoffice/phpspreadsheet": "^1.21",
+        "ramsey/uuid": "^4.2",
         "sensio/framework-extra-bundle": "^6.2",
         "symfony/asset": "5.4.*",
         "symfony/console": "5.4.*",
@@ -21,6 +24,8 @@
         "symfony/flex": "^1.17|^2",
         "symfony/form": "5.4.*",
         "symfony/framework-bundle": "5.4.*",
+        "symfony/http-client": "5.4.*",
+        "symfony/mime": "5.4.*",
         "symfony/password-hasher": "5.4.*",
         "symfony/proxy-manager-bridge": "5.4.*",
         "symfony/runtime": "5.4.*",
@@ -83,7 +88,11 @@
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "phpunit/phpunit": "^9.5",
+        "symfony/browser-kit": "5.4.*",
+        "symfony/css-selector": "5.4.*",
         "symfony/maker-bundle": "^1.36",
+        "symfony/phpunit-bridge": "^6.0",
         "symfony/stopwatch": "5.4.*",
         "symfony/web-profiler-bundle": "5.4.*"
     }

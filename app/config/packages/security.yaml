@@ -66,11 +66,16 @@ security:
     # - { path: ^/profile, roles: ROLE_USER }
     - { path: ^/api/login, roles: PUBLIC_ACCESS }
     - { path: ^/api/user, roles: PUBLIC_ACCESS }
+    - { path: ^/api/supply, roles: ROLE_SUPPLY }
     - { path: ^/api/categories, roles: PUBLIC_ACCESS }
+    - { path: ^/api/products, roles: PUBLIC_ACCESS }
+    - { path: ^/api/supply, roles: ROLE_SUPPLY }
     - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
     - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/category,       roles: IS_AUTHENTICATED_FULLY }
     - { path: ^/product,       roles: IS_AUTHENTICATED_FULLY }
-    - { path: ^/admin,     roles: ROLE_ADMIN }
+#    - { path: ^/admin,     roles: ROLE_ADMIN }
+    - { path: ^/catalog,     roles: ROLE_ADMIN }
+    - { path: ^/get,     roles: ROLE_ADMIN }
 
 

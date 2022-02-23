@@ -29,4 +29,21 @@ class AddCountHistoryHandler
             $this->entityManager->persist($countHist);
         }
     }
+
+    public function addCountSupply(Products $product, $newPrice): CountHist
+    {
+        $countHist = (new CountHist())
+            ->setCount($product->getStatusCount())
+            ->setDate(new DateTime(date("Y-m-d", time())))
+            ->setdelta($newPrice - $product->getStatusCount())
+            ->setProduct($product);
+        $this->entityManager->persist(
+            (new CountHist())
+                ->setCount($product->getStatusCount())
+                ->setDate(new DateTime(date("Y-m-d", time())))
+                ->setdelta($newPrice - $product->getStatusCount())
+                ->setProduct($product)
+        );
+        return $countHist;
+    }
 }

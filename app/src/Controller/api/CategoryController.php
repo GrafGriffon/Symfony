@@ -130,11 +130,11 @@ class CategoryController extends AbstractController
             }
 
             $request = $this->transformJsonBody($request);
-            $errors = (new CategoryValidator())->validate($request->request->all());
-
-            if (!empty($errors)) {
-                throw new ValidatorException('Введённые данные некорректны: ' . implode('; ', $errors));
-            }
+//            $errors = (new CategoryValidator())->validate($request->request->all());
+//
+//            if (!empty($errors)) {
+//                throw new ValidatorException('Введённые данные некорректны: ' . implode('; ', $errors));
+//            }
             $category
                 ->setTitle($request->get('title'))
                 ->setParent($repository->find($request->get('parent')))

@@ -30,13 +30,18 @@ class AdminController extends AbstractController
      */
     public function show(Request $request, CategoryRepository $repository, PaginatorInterface $paginator): Response
     {
-        $products = $paginator->paginate(
-            $repository->findAll(),
-            $request->query->getInt('page', 1),
-            20
-        );
-        return $this->render('admin/categories.html.twig', [
-            'elements' => $products
-        ]);
+        try {
+            $products = $paginator->paginate(
+                $repository->findAll(),
+                $request->query->getInt('page', 1),
+                20
+            );
+            return $this->render('admin/categories.html.twig', [
+                'elements' => $products
+            ]);
+        }
+        catch (Throwable $e){
+            return $this->render('error.html.twig');
+        }
     }
 }

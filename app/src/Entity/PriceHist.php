@@ -56,12 +56,12 @@ class PriceHist
         return $this;
     }
 
-    public function getdelta(): int
+    public function getDelta(): int
     {
         return $this->delta;
     }
 
-    public function setdelta(int $delta): self
+    public function setDelta(int $delta): self
     {
         $this->delta = $delta;
 

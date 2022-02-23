@@ -20,14 +20,14 @@ use Symfony\Component\Validator\Exception\ValidatorException;
 /**
  * Class PostController
  * @package App\Controller
- * @Route("/api", name="post_api")
+ * @Route("/api", name="product_api")
  */
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/posts", name="posts", methods={"GET"})
+     * @Route("/products", name="posts", methods={"GET"})
      */
-    public function getPosts(ProductsRepository $productRepository): JsonResponse
+    public function getProducts(ProductsRepository $productRepository): JsonResponse
     {
         $data = $productRepository->findAll();
         $products = array();

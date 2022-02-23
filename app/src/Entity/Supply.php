@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\SupplyRepository;
+use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -24,6 +25,10 @@ class Supply
     #[ORM\ManyToMany(targetEntity: "Products", inversedBy: "supplyer")]
     private $products;
 
+    #[ORM\OneToMany(targetEntity: "User", mappedBy: "supply")]
+    #[ORM\JoinColumn(nullable: true)]
+    private $user;
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
@@ -36,6 +41,18 @@ class Supply
     {
         return $this->products;
     }
+
+    public function getUser(): User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user): self
+    {
+        $this->user = $user;
+        return $this;
+    }
+
     public function addProduct(Products $product): self
     {
         if (!$this->products->contains($product)) {
@@ -44,6 +61,7 @@ class Supply
         }
         return $this;
     }
+
     public function removeProduct(Products $product): self
     {
         if ($this->products->removeElement($product)) {

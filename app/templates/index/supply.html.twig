@@ -1,0 +1,43 @@
+<link href="{{ asset('css/product.css') }}" rel="stylesheet"/>
+<body>
+{{ include('header.html.twig') }}
+<link href="{{ asset('css/addcategory.css') }}" rel="stylesheet" />
+
+<title>Supply</title>
+<table style="margin-top: 20px;">
+    <th style="text-align: center">{{ supply }}</th>
+</table>
+<table style="margin-bottom: 20px">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Count</th>
+        <th>Category</th>
+    </tr>
+    {% for element in elements %}
+        <tr>
+            <td><a class="category" style="color: white" href={{ '/supply/' ~ element.id }}> {{ element.name }} </a>
+            </td>
+            <td>
+                {{ element.currPrice }}
+            <td>
+                {{ element.statusCount }}
+            </td>
+            <td>{{ element.category.title }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{#<form action="" method="post" enctype="multipart/form-data" >#}
+{#    <input type="hidden" name="MAX_FILE_SIZE" value="2000000" />#}
+{#    <input type="file" name="filename"><br>#}
+{#    <input type="submit" value="Отправить"><br>#}
+{#</form>#}
+<form method="post" action="">
+    <input type="submit" name="submit" class="form-adding" value="Download">
+</form>
+<div class="navigation">
+    {{ knp_pagination_render(elements) }}
+</div>
+{{ include('footer.html.twig') }}
+</body>

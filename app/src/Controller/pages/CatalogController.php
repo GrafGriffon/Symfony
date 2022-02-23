@@ -22,17 +22,22 @@ class CatalogController extends AbstractController
      */
     public function show(int $category, Request $request, ProductsRepository $repository, CategoryRepository $categoryRepository, PaginatorInterface $paginator): Response
     {
-        $categories = GetSubcategories::printIndex($category, [$category], $categoryRepository);
-
-        $products = $paginator->paginate(
-            $repository->createQueryBuilder('u')
-                ->where('u.category in (' . implode(", ", $categories) . ')')
-                ->getQuery(),
-            $request->query->getInt('page', 1),
-            20
-        );
-        return $this->render('index/products.html.twig', [
-            'elements' => $products
-        ]);
+        try {
+            $categories = GetSubcategories::printIndex($category, [$category], $categoryRepository);
+            $products = $paginator->paginate(
+                $repository->createQueryBuilder('u')
+                    ->where('u.category in (' . implode(", ", $categories) . ')')
+                    ->getQuery(),
+                $request->query->getInt('page', 1),
+                20
+            );
+//        }
+            return $this->render('index/products.html.twig', [
+                'elements' => $products
+            ]);
+        }
+        catch (Throwable $e){
+            return $this->render('error.html.twig');
+        }
     }
 }

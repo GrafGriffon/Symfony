@@ -38,9 +38,24 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'binary', nullable: true)]
     private $status;
 
+    #[ORM\ManyToOne(targetEntity: "Supply", inversedBy: "user")]
+    #[ORM\JoinColumn(name:"supply", onDelete: 'CASCADE', nullable: true)]
+    private $supply;
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getSupply(): Supply
+    {
+        return $this->supply;
+    }
+
+    public function setSupply(Supply $supply): self
+    {
+        $this->supply = $supply;
+        return $this;
     }
 
     public function getFirstName(): ?string

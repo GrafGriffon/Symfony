@@ -20,8 +20,21 @@
                 {% else %}
                     <td>{{ element.name }}</td>
                 {% endif %}
-                <td>{{ element.currPrice }}</td>
-                <td>{{ element.statusCount }}</td>
+                <td>
+                    {% if app.user %}
+                        <a class="category" style="color: white"
+                           href={{ '/price-hist/' ~ element.id }}> {{ element.currPrice }} </a>
+                    {% else %}
+                        {{ element.currPrice }}
+                    {% endif %}
+                <td>
+                    {% if app.user %}
+                        <a class="category" style="color: white"
+                           href={{ '/count-hist/' ~ element.id }}> {{ element.statusCount }} </a>
+                    {% else %}
+                        {{ element.statusCount }}
+                    {% endif %}
+                </td>
                 <td>{{ element.category.title }}</td>
                 {% if app.user %}
                     <td style="width: 16px">
