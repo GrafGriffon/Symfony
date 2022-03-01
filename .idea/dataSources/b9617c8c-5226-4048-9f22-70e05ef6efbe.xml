@@ -3,17 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.32">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-13457||-9223372036854775808|c|G
-13457||10|c|G
-13457||10|C|G
-13457||10|T|G</Grants>
-      <IntrospectionStateNumber>702</IntrospectionStateNumber>
+      <IntrospectionStateNumber>11157</IntrospectionStateNumber>
       <ServerVersion>12.9</ServerVersion>
-      <StartupTime>1645510349</StartupTime>
+      <StartupTime>1645795669</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -277,7 +269,7 @@ false Antarctica/Vostok
 false Arctic/Longyearbyen
 false Asia/Aden
 false Asia/Almaty
-false Asia/Amman
+true Asia/Amman
 false Asia/Anadyr
 false Asia/Aqtau
 false Asia/Aqtobe
@@ -1030,7 +1022,7 @@ false posix/Antarctica/Vostok
 false posix/Arctic/Longyearbyen
 false posix/Asia/Aden
 false posix/Asia/Almaty
-false posix/Asia/Amman
+true posix/Asia/Amman
 false posix/Asia/Anadyr
 false posix/Asia/Aqtau
 false posix/Asia/Aqtobe
@@ -1408,7 +1400,7 @@ false posixrules
 13158||10|C|G
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
-      <IntrospectionStateNumber>703</IntrospectionStateNumber>
+      <IntrospectionStateNumber>11158</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4626,7 +4618,7 @@ false posixrules
     <schema id="246" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>703</IntrospectionStateNumber>
+      <IntrospectionStateNumber>11158</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>276</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4643,100 +4635,124 @@ false posixrules
       <StateNumber>495</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="249" parent="246" name="price_hist_id_seq">
+    <sequence id="249" parent="246" name="notification_id_seq">
+      <DataType>bigint|0s</DataType>
+      <ObjectId>16596</ObjectId>
+      <StateNumber>11058</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="250" parent="246" name="price_hist_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16395</ObjectId>
       <StateNumber>499</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="250" parent="246" name="products_id_seq">
+    <sequence id="251" parent="246" name="products_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16393</ObjectId>
       <StateNumber>498</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="251" parent="246" name="supply_id_seq">
+    <sequence id="252" parent="246" name="supply_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16389</ObjectId>
       <StateNumber>496</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="252" parent="246" name="user_id_seq">
+    <sequence id="253" parent="246" name="user_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16385</ObjectId>
       <StateNumber>494</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="253" parent="246" name="category">
+    <table id="254" parent="246" name="category">
       <ObjectId>16426</ObjectId>
       <StateNumber>517</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="254" parent="246" name="count_hist">
+    <table id="255" parent="246" name="count_hist">
       <ObjectId>16408</ObjectId>
       <StateNumber>514</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="255" parent="246" name="price_hist">
+    <table id="256" parent="246" name="doctrine_migration_versions">
+      <ObjectId>16588</ObjectId>
+      <StateNumber>804</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="257" parent="246" name="notification">
+      <ObjectId>16673</ObjectId>
+      <StateNumber>11138</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="258" parent="246" name="notification_user">
+      <ObjectId>16692</ObjectId>
+      <StateNumber>11142</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="259" parent="246" name="price_hist">
       <ObjectId>16438</ObjectId>
       <StateNumber>519</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="256" parent="246" name="products">
+    <table id="260" parent="246" name="products">
       <ObjectId>16432</ObjectId>
-      <StateNumber>514</StateNumber>
+      <StateNumber>807</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="257" parent="246" name="supply">
+    <table id="261" parent="246" name="supply">
       <ObjectId>16414</ObjectId>
       <StateNumber>515</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="258" parent="246" name="supply_products">
+    <table id="262" parent="246" name="supply_products">
       <ObjectId>16419</ObjectId>
       <StateNumber>515</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="259" parent="246" name="user">
+    <table id="263" parent="246" name="user">
       <ObjectId>16397</ObjectId>
       <StateNumber>577</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="260" parent="253" name="id">
+    <column id="264" parent="254" name="id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>508</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="261" parent="253" name="parent">
+    <column id="265" parent="254" name="parent">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
       <StateNumber>508</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="262" parent="253" name="title">
+    <column id="266" parent="254" name="title">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>508</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="263" parent="253" name="level">
+    <column id="267" parent="254" name="level">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>508</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="264" parent="253" name="fk_64c19c13d8e604f">
+    <foreign-key id="268" parent="254" name="fk_64c19c13d8e604f">
       <ColNames>parent</ColNames>
       <ObjectId>16459</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4747,7 +4763,7 @@ false posixrules
       <RefTableName>category</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="265" parent="253" name="category_pkey">
+    <index id="269" parent="254" name="category_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
@@ -4758,7 +4774,7 @@ false posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="266" parent="253" name="idx_64c19c13d8e604f">
+    <index id="270" parent="254" name="idx_64c19c13d8e604f">
       <ClassIds>1978</ClassIds>
       <ColNames>parent</ColNames>
       <CollationIds>0</CollationIds>
@@ -4766,7 +4782,7 @@ false posixrules
       <StateNumber>509</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="267" parent="253" name="category_pkey">
+    <key id="271" parent="254" name="category_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16430</ObjectId>
@@ -4774,41 +4790,41 @@ false posixrules
       <StateNumber>508</StateNumber>
       <UnderlyingIndexId>16429</UnderlyingIndexId>
     </key>
-    <column id="268" parent="254" name="id">
+    <column id="272" parent="255" name="id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>502</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="269" parent="254" name="product">
+    <column id="273" parent="255" name="product">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
       <StateNumber>502</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="270" parent="254" name="date">
+    <column id="274" parent="255" name="date">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>502</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="271" parent="254" name="count">
+    <column id="275" parent="255" name="count">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>502</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="272" parent="254" name="delta">
+    <column id="276" parent="255" name="delta">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>502</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="273" parent="254" name="fk_a5a796a2d34a04ad">
+    <foreign-key id="277" parent="255" name="fk_a5a796a2d34a04ad">
       <ColNames>product</ColNames>
       <ObjectId>16444</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4820,7 +4836,7 @@ false posixrules
       <RefTableName>products</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="274" parent="254" name="count_hist_pkey">
+    <index id="278" parent="255" name="count_hist_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
@@ -4831,7 +4847,7 @@ false posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="275" parent="254" name="idx_a5a796a2d34a04ad">
+    <index id="279" parent="255" name="idx_a5a796a2d34a04ad">
       <ClassIds>1978</ClassIds>
       <ColNames>product</ColNames>
       <CollationIds>0</CollationIds>
@@ -4839,7 +4855,7 @@ false posixrules
       <StateNumber>503</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="276" parent="254" name="count_hist_pkey">
+    <key id="280" parent="255" name="count_hist_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16412</ObjectId>
@@ -4847,41 +4863,203 @@ false posixrules
       <StateNumber>502</StateNumber>
       <UnderlyingIndexId>16411</UnderlyingIndexId>
     </key>
-    <column id="277" parent="255" name="id">
+    <column id="281" parent="256" name="version">
+      <DataType>varchar(191)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>804</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="282" parent="256" name="executed_at">
+      <DataType>timestamp(0)|0s</DataType>
+      <DefaultExpression>NULL::timestamp without time zone</DefaultExpression>
+      <Position>2</Position>
+      <StateNumber>804</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="283" parent="256" name="execution_time">
+      <DataType>integer|0s</DataType>
+      <Position>3</Position>
+      <StateNumber>804</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="284" parent="256" name="doctrine_migration_versions_pkey">
+      <ClassIds>3126</ClassIds>
+      <ColNames>version</ColNames>
+      <CollationIds>100</CollationIds>
+      <CollationNames>default</CollationNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16592</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>804</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="285" parent="256" name="doctrine_migration_versions_pkey">
+      <ColNames>version</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16593</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>804</StateNumber>
+      <UnderlyingIndexId>16592</UnderlyingIndexId>
+    </key>
+    <column id="286" parent="257" name="id">
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>11136</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="287" parent="257" name="title">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>11136</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="288" parent="257" name="description">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>11136</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="289" parent="257" name="date_send">
+      <DataType>timestamp(0)|0s</DataType>
+      <DefaultExpression>NULL::timestamp without time zone</DefaultExpression>
+      <Position>4</Position>
+      <StateNumber>11136</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="290" parent="257" name="notification_pkey">
+      <ClassIds>1978</ClassIds>
+      <ColNames>id</ColNames>
+      <CollationIds>0</CollationIds>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16680</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>11136</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="291" parent="257" name="notification_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16681</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>11136</StateNumber>
+      <UnderlyingIndexId>16680</UnderlyingIndexId>
+    </key>
+    <column id="292" parent="258" name="notification_id">
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>11139</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="293" parent="258" name="user_id">
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>11139</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="294" parent="258" name="fk_35af9d73ef1a9d84">
+      <ColNames>notification_id</ColNames>
+      <ObjectId>16699</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <RefKeyName>notification_pkey</RefKeyName>
+      <StateNumber>11142</StateNumber>
+      <RefTableId>16673</RefTableId>
+      <RefTableName>notification</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <foreign-key id="295" parent="258" name="fk_35af9d73a76ed395">
+      <ColNames>user_id</ColNames>
+      <ObjectId>16704</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <RefKeyName>user_pkey</RefKeyName>
+      <StateNumber>11143</StateNumber>
+      <RefTableId>16397</RefTableId>
+      <RefTableName>user</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="296" parent="258" name="notification_user_pkey">
+      <ClassIds>1978,1978</ClassIds>
+      <ColNames>notification_id
+user_id</ColNames>
+      <CollationIds>0,0</CollationIds>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16695</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>11139</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="297" parent="258" name="idx_35af9d73ef1a9d84">
+      <ClassIds>1978</ClassIds>
+      <ColNames>notification_id</ColNames>
+      <CollationIds>0</CollationIds>
+      <ObjectId>16697</ObjectId>
+      <StateNumber>11140</StateNumber>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="298" parent="258" name="idx_35af9d73a76ed395">
+      <ClassIds>1978</ClassIds>
+      <ColNames>user_id</ColNames>
+      <CollationIds>0</CollationIds>
+      <ObjectId>16698</ObjectId>
+      <StateNumber>11141</StateNumber>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="299" parent="258" name="notification_user_pkey">
+      <ColNames>notification_id
+user_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16696</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>11139</StateNumber>
+      <UnderlyingIndexId>16695</UnderlyingIndexId>
+    </key>
+    <column id="300" parent="259" name="id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>512</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="278" parent="255" name="product">
+    <column id="301" parent="259" name="product">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
       <StateNumber>512</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="279" parent="255" name="date">
+    <column id="302" parent="259" name="date">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>512</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="280" parent="255" name="delta">
+    <column id="303" parent="259" name="delta">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>512</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="281" parent="255" name="current_price">
+    <column id="304" parent="259" name="current_price">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>512</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="282" parent="255" name="fk_b6f89df5d34a04ad">
+    <foreign-key id="305" parent="259" name="fk_b6f89df5d34a04ad">
       <ColNames>product</ColNames>
       <ObjectId>16469</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4893,7 +5071,7 @@ false posixrules
       <RefTableName>products</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="283" parent="255" name="price_hist_pkey">
+    <index id="306" parent="259" name="price_hist_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
@@ -4904,7 +5082,7 @@ false posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="284" parent="255" name="idx_b6f89df5d34a04ad">
+    <index id="307" parent="259" name="idx_b6f89df5d34a04ad">
       <ClassIds>1978</ClassIds>
       <ColNames>product</ColNames>
       <CollationIds>0</CollationIds>
@@ -4912,7 +5090,7 @@ false posixrules
       <StateNumber>513</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="285" parent="255" name="price_hist_pkey">
+    <key id="308" parent="259" name="price_hist_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16442</ObjectId>
@@ -4920,41 +5098,59 @@ false posixrules
       <StateNumber>512</StateNumber>
       <UnderlyingIndexId>16441</UnderlyingIndexId>
     </key>
-    <column id="286" parent="256" name="id">
+    <column id="309" parent="260" name="id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>510</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="287" parent="256" name="category">
+    <column id="310" parent="260" name="category">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
       <StateNumber>510</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="288" parent="256" name="name">
+    <column id="311" parent="260" name="name">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>510</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="289" parent="256" name="status_count">
+    <column id="312" parent="260" name="status_count">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>510</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="290" parent="256" name="curr_price">
+    <column id="313" parent="260" name="curr_price">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>510</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="291" parent="256" name="fk_b3ba5a5a64c19c1">
+    <column id="314" parent="260" name="article">
+      <DataType>integer|0s</DataType>
+      <Position>6</Position>
+      <StateNumber>805</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="315" parent="260" name="date_create">
+      <DataType>date|0s</DataType>
+      <Position>7</Position>
+      <StateNumber>806</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="316" parent="260" name="date_update">
+      <DataType>date|0s</DataType>
+      <Position>8</Position>
+      <StateNumber>807</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <foreign-key id="317" parent="260" name="fk_b3ba5a5a64c19c1">
       <ColNames>category</ColNames>
       <ObjectId>16464</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4966,7 +5162,7 @@ false posixrules
       <RefTableName>category</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="292" parent="256" name="products_pkey">
+    <index id="318" parent="260" name="products_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
@@ -4977,7 +5173,7 @@ false posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="293" parent="256" name="idx_b3ba5a5a64c19c1">
+    <index id="319" parent="260" name="idx_b3ba5a5a64c19c1">
       <ClassIds>1978</ClassIds>
       <ColNames>category</ColNames>
       <CollationIds>0</CollationIds>
@@ -4985,7 +5181,7 @@ false posixrules
       <StateNumber>511</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="294" parent="256" name="products_pkey">
+    <key id="320" parent="260" name="products_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16436</ObjectId>
@@ -4993,28 +5189,28 @@ false posixrules
       <StateNumber>510</StateNumber>
       <UnderlyingIndexId>16435</UnderlyingIndexId>
     </key>
-    <column id="295" parent="257" name="id">
+    <column id="321" parent="261" name="id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>504</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="296" parent="257" name="supplier">
+    <column id="322" parent="261" name="supplier">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>504</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="297" parent="257" name="period_of_execution">
+    <column id="323" parent="261" name="period_of_execution">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>504</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="298" parent="257" name="supply_pkey">
+    <index id="324" parent="261" name="supply_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
@@ -5025,7 +5221,7 @@ false posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="299" parent="257" name="supply_pkey">
+    <key id="325" parent="261" name="supply_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16418</ObjectId>
@@ -5033,21 +5229,21 @@ false posixrules
       <StateNumber>504</StateNumber>
       <UnderlyingIndexId>16417</UnderlyingIndexId>
     </key>
-    <column id="300" parent="258" name="supply_id">
+    <column id="326" parent="262" name="supply_id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>505</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="301" parent="258" name="products_id">
+    <column id="327" parent="262" name="products_id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>505</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="302" parent="258" name="fk_1b613253ff28c0d8">
+    <foreign-key id="328" parent="262" name="fk_1b613253ff28c0d8">
       <ColNames>supply_id</ColNames>
       <ObjectId>16449</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -5059,7 +5255,7 @@ false posixrules
       <RefTableName>supply</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="303" parent="258" name="fk_1b6132536c8a81a9">
+    <foreign-key id="329" parent="262" name="fk_1b6132536c8a81a9">
       <ColNames>products_id</ColNames>
       <ObjectId>16454</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -5071,7 +5267,7 @@ false posixrules
       <RefTableName>products</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="304" parent="258" name="supply_products_pkey">
+    <index id="330" parent="262" name="supply_products_pkey">
       <ClassIds>1978,1978</ClassIds>
       <ColNames>supply_id
 products_id</ColNames>
@@ -5083,7 +5279,7 @@ products_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="305" parent="258" name="idx_1b613253ff28c0d8">
+    <index id="331" parent="262" name="idx_1b613253ff28c0d8">
       <ClassIds>1978</ClassIds>
       <ColNames>supply_id</ColNames>
       <CollationIds>0</CollationIds>
@@ -5091,7 +5287,7 @@ products_id</ColNames>
       <StateNumber>506</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="306" parent="258" name="idx_1b6132536c8a81a9">
+    <index id="332" parent="262" name="idx_1b6132536c8a81a9">
       <ClassIds>1978</ClassIds>
       <ColNames>products_id</ColNames>
       <CollationIds>0</CollationIds>
@@ -5099,7 +5295,7 @@ products_id</ColNames>
       <StateNumber>507</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="307" parent="258" name="supply_products_pkey">
+    <key id="333" parent="262" name="supply_products_pkey">
       <ColNames>supply_id
 products_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -5108,60 +5304,60 @@ products_id</ColNames>
       <StateNumber>505</StateNumber>
       <UnderlyingIndexId>16422</UnderlyingIndexId>
     </key>
-    <column id="308" parent="259" name="id">
+    <column id="334" parent="263" name="id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>500</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="309" parent="259" name="email">
+    <column id="335" parent="263" name="email">
       <DataType>varchar(180)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>500</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="310" parent="259" name="roles">
+    <column id="336" parent="263" name="roles">
       <DataType>json|0s</DataType>
       <Position>3</Position>
       <StateNumber>500</StateNumber>
       <TypeId>114</TypeId>
     </column>
-    <column id="311" parent="259" name="password">
+    <column id="337" parent="263" name="password">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>500</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="312" parent="259" name="first_name">
+    <column id="338" parent="263" name="first_name">
       <DataType>varchar(255)|0s</DataType>
       <DefaultExpression>NULL::character varying</DefaultExpression>
       <Position>5</Position>
       <StateNumber>500</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="313" parent="259" name="last_name">
+    <column id="339" parent="263" name="last_name">
       <DataType>varchar(255)|0s</DataType>
       <DefaultExpression>NULL::character varying</DefaultExpression>
       <Position>6</Position>
       <StateNumber>500</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="314" parent="259" name="status">
+    <column id="340" parent="263" name="status">
       <DataType>bytea|0s</DataType>
       <Position>7</Position>
       <StateNumber>500</StateNumber>
       <TypeId>17</TypeId>
     </column>
-    <column id="315" parent="259" name="supply">
+    <column id="341" parent="263" name="supply">
       <DataType>integer|0s</DataType>
       <Position>8</Position>
       <StateNumber>595</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="316" parent="259" name="fk_8d93d649d219948c">
+    <foreign-key id="342" parent="263" name="fk_8d93d649d219948c">
       <ColNames>supply</ColNames>
       <ObjectId>16482</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -5173,7 +5369,7 @@ products_id</ColNames>
       <RefTableName>supply</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="317" parent="259" name="user_pkey">
+    <index id="343" parent="263" name="user_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
@@ -5184,7 +5380,7 @@ products_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="318" parent="259" name="uniq_8d93d649e7927c74">
+    <index id="344" parent="263" name="uniq_8d93d649e7927c74">
       <ClassIds>3126</ClassIds>
       <ColNames>email</ColNames>
       <CollationIds>100</CollationIds>
@@ -5194,7 +5390,7 @@ products_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="319" parent="259" name="idx_8d93d649d219948c">
+    <index id="345" parent="263" name="idx_8d93d649d219948c">
       <ClassIds>1978</ClassIds>
       <ColNames>supply</ColNames>
       <CollationIds>0</CollationIds>
@@ -5202,7 +5398,7 @@ products_id</ColNames>
       <StateNumber>597</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="320" parent="259" name="user_pkey">
+    <key id="346" parent="263" name="user_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16406</ObjectId>

@@ -54,22 +54,7 @@ class SupplyController extends AbstractController
         $response->headers->set('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         $response->headers->set('Content-Disposition', $contentDisposition);
         return $response;
-//        }
-//        } else {
-//            return new JsonResponse(["result" => "File does not exist"]);
-//        }
     }
-
-//    /**
-//     * @Route("/supply/download", methods={"GET"})
-//     */
-//    public function downloadProducts(ProductsRepository $repository, TableHandler $handler)
-//    {
-//        $fileName = (Uuid::uuid4())->toString();
-//        $handler->createTable($repository->getListProduct($this->getUser())->getResult(), $fileName);
-//        $data['link'] = "http://localhost:8081/api/download/" . $fileName;
-//        return new JsonResponse($data);
-//    }
 
     /**
      * @Route("/supply", methods={"GET"})

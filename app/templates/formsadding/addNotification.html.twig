@@ -1,0 +1,10 @@
+{% block body %}
+    {{ include('header.html.twig') }}
+    <link href="{{ asset('css/addproduct.css') }}" rel="stylesheet" />
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn btn-success waves-effect waves-light" type="submit">Save</button>
+    {{ form_end(form) }}
+
+    {{ include('footer.html.twig') }}
+{% endblock %}

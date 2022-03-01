@@ -8,6 +8,7 @@ use App\Repository\UserRepository;
 use App\Validation\CategoryValidator;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
+use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,8 +27,9 @@ class CategoryController extends AbstractController
      * @return JsonResponse
      * @Route("/categories", name="categories", methods={"GET"})
      */
-    public function getCategories(PaginatorInterface $paginator, Request $request, CategoryRepository $categoryRepository)
+    public function getCategories(PaginatorInterface $paginator, Request $request, CategoryRepository $categoryRepository, LoggerInterface $logger)
     {
+//        $logger->
         $paginator = $categoryRepository->getListCategory($categoryRepository, $paginator, $request);
         $categories = array();
         foreach ($paginator as $category) {

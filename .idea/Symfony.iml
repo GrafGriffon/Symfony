@@ -150,6 +150,24 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/monolog-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/monolog-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/notifier" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/lorenzo/pinky" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/twig/cssinliner-extra" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/twig/inky-extra" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/sendgrid-mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/expo-notifier" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/firebase-notifier" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/google-mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/messenger" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/doctrine-messenger" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/redis-messenger" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/amqp-messenger" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

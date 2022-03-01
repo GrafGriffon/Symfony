@@ -42,17 +42,6 @@ class Supply
         return $this->products;
     }
 
-    public function getUser(): User
-    {
-        return $this->user;
-    }
-
-    public function setUser(User $user): self
-    {
-        $this->user = $user;
-        return $this;
-    }
-
     public function addProduct(Products $product): self
     {
         if (!$this->products->contains($product)) {
@@ -67,6 +56,17 @@ class Supply
         if ($this->products->removeElement($product)) {
             $product->removeSupply($this);
         }
+        return $this;
+    }
+
+    public function getUser(): User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user): self
+    {
+        $this->user = $user;
         return $this;
     }
 

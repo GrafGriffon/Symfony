@@ -3,10 +3,12 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints\Collection;
 
 /**
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
@@ -41,6 +43,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\ManyToOne(targetEntity: "Supply", inversedBy: "user")]
     #[ORM\JoinColumn(name:"supply", onDelete: 'CASCADE', nullable: true)]
     private $supply;
+
+
+    public function __toString()
+    {
+        return $this->email." ".$this->first_name." ".$this->last_name;
+    }
 
     public function getId(): ?int
     {
