@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c2e0db2-78a6-4fa3-8152-9c063aa323a2" name="Changes" comment="demo-project - local save auth">
-      <change afterPath="$PROJECT_DIR$/app/src/Handler/UserHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Repository/UserRepository.php" afterDir="false" />
+    <list default="true" id="6c2e0db2-78a6-4fa3-8152-9c063aa323a2" name="Changes" comment="demo-project - local save endpoints">
+      <change afterPath="$PROJECT_DIR$/app/src/Validation/AbstractValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Validation/EditUserValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Validation/RegistrationValidator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Handler/UserHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Handler/UserHandler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +52,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/app/.env" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/composer.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/composer.lock" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/config/packages/lexik_jwt_authentication.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/config/packages/security.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/config/routes.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/config/services.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Controller/AuthController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Controller/UserController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Handler/UserHandler.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docker/nginx/Dockerfile" root0="FORCE_HIGHLIGHTING" />
@@ -168,16 +167,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "/home/garfgriffon/PhpstormProjects/Symfony_proj"
+    "last_opened_file_path": "/home/garfgriffon/PhpstormProjects/Symfony_proj/app/src/Validation"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/Validation" />
       <recent name="$PROJECT_DIR$/app/src/Entity" />
       <recent name="$PROJECT_DIR$/app/src/Controller" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/templates/admin" />
-      <recent name="$PROJECT_DIR$/app/templates/formsadding" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/Controller/forms" />
@@ -332,7 +331,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662908535317</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="demo-project - local save endpoints">
+      <created>1662912692824</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1662912692824</updated>
+    </task>
+    <task id="LOCAL-00013" summary="demo-project - local save endpoints">
+      <created>1662912719531</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1662912719531</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +368,7 @@
     <MESSAGE value="new commit" />
     <MESSAGE value="demo-project - first save" />
     <MESSAGE value="demo-project - local save auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="demo-project - local save auth" />
+    <MESSAGE value="demo-project - local save endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo-project - local save endpoints" />
   </component>
 </project>

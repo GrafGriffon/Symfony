@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Entity;
+
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * @ORM\Table(name="users")
  * @ORM\Entity
@@ -61,7 +64,7 @@ class User implements UserInterface
         $this->lastName = $lastName;
         $this->username = $username;
         $this->roles = ['ROLE_USER'];
-        $this->phone= $phone;
+        $this->phone = $phone;
     }
 
     public function getUsername(): string
@@ -69,9 +72,10 @@ class User implements UserInterface
         return $this->username;
     }
 
-    public function setUsername(string $username): void
+    public function setUsername(string $username): self
     {
         $this->username = $username;
+        return $this;
     }
 
     public function getSalt()
@@ -84,9 +88,10 @@ class User implements UserInterface
         return $this->password;
     }
 
-    public function setPassword($password)
+    public function setPassword($password): self
     {
         $this->password = $password;
+        return $this;
     }
 
     public function getEmail(): string
@@ -94,9 +99,10 @@ class User implements UserInterface
         return $this->email;
     }
 
-    public function setEmail(string $email): void
+    public function setEmail(string $email): self
     {
         $this->email = $email;
+        return $this;
     }
 
     public function getRoles(): ?array
@@ -121,7 +127,6 @@ class User implements UserInterface
     public function setFirstName(string $firstName): self
     {
         $this->firstName = $firstName;
-
         return $this;
     }
 
@@ -133,7 +138,6 @@ class User implements UserInterface
     public function setLastName(string $lastName): self
     {
         $this->lastName = $lastName;
-
         return $this;
     }
 
@@ -145,14 +149,12 @@ class User implements UserInterface
     public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
-
         return $this;
     }
 
     public function setRoles(?array $roles): self
     {
         $this->roles = $roles;
-
         return $this;
     }
 

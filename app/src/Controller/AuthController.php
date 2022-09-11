@@ -3,6 +3,7 @@ namespace App\Controller;
 
 
 use App\Entity\User;
+use App\Validation\RegistrationValidator;
 use Lexik\Bundle\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -11,6 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Exception\ValidatorException;
 
 class AuthController extends ApiController
 {
@@ -19,6 +21,10 @@ class AuthController extends ApiController
     {
         $em = $this->getDoctrine()->getManager();
         $request = $this->transformJsonBody($request);
+        $errors = (new RegistrationValidator())->validate($request->request->all());
+        if (!empty($errors)) {
+            throw new ValidatorException('Введённые данные некорректны: ' . implode('; ', $errors));
+        }
         $username = $request->get('username');
         $password = $request->get('password');
         $firstName = $request->get('firstName');

@@ -5,13 +5,18 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Handler\UserHandler;
+use App\Validation\EditUserValidator;
+use App\Validation\RegistrationValidator;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Validator\Exception\ValidatorException;
 use function Composer\Autoload\includeFile;
 
 /**
@@ -19,7 +24,7 @@ use function Composer\Autoload\includeFile;
  * @package App\Controller
  * @Route("/api/user", name="post_api")
  */
-class UserController extends AbstractController
+class UserController extends ApiController
 {
     /**
      * @Route("/list", name="listUsers", methods={"GET"})
@@ -55,7 +60,7 @@ class UserController extends AbstractController
     /**
      * @Route("/{user}", name="editUser", methods={"PATCH"}, requirements={"page"="\d+"})
      */
-    public function editUser(?User $user, EntityManagerInterface $em): JsonResponse
+    public function editUser(?User $user, EntityManagerInterface $em, UserHandler $handler, Request $request): JsonResponse
     {
         if (!$user) {
             throw $this->createNotFoundException('This user does not exist');
@@ -63,8 +68,43 @@ class UserController extends AbstractController
         if ($this->getUser() !== $user) {
             $this->denyAccessUnlessGranted('ROLE_ADMIN');
         }
-
+        $request = $this->transformJsonBody($request);
+        $errors = (new EditUserValidator())->validate($request->request->all());
+        if (!empty($errors)) {
+            throw new ValidatorException('Введённые данные некорректны: ' . implode('; ', $errors));
+        }
+        $handler->editUser($user, $request);
         $em->flush();
-        return new JsonResponse('Successfully', Response::HTTP_ACCEPTED);
+        return new JsonResponse('Successfully', Response::HTTP_NO_CONTENT);
+    }
+
+    /**
+     * @Route("/new", name="newUser", methods={"POST"})
+     */
+    public function createUser(EntityManagerInterface $em, Request $request, UserPasswordEncoderInterface $encoder): JsonResponse
+    {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+        $request = $this->transformJsonBody($request);
+        $errors = (new RegistrationValidator())->validate($request->request->all());
+        if (!empty($errors)) {
+            throw new ValidatorException('Введённые данные некорректны: ' . implode('; ', $errors));
+        }
+
+        $username = $request->get('username');
+        $password = $request->get('password');
+        $firstName = $request->get('firstName');
+        $lastName = $request->get('lastName');
+        $email = $request->get('email');
+        $phone = $request->get('phone');
+
+        if (empty($username) || empty($password) || empty($email) || empty($firstName) || empty($lastName)) {
+            return $this->respondValidationError("Invalid data");
+        }
+
+        $user = new User($username, $email, $firstName, $lastName, $phone);
+        $user->setPassword($encoder->encodePassword($user, $password));
+        $em->persist($user);
+        $em->flush();
+        return $this->respondWithSuccess(sprintf('User %s successfully created', $user->getUsername()));
     }
 }
