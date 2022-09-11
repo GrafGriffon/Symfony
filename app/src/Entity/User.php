@@ -30,6 +30,21 @@ class User implements UserInterface
     private $email;
 
     /**
+     * @ORM\Column(type="string", length=45, nullable=true)
+     */
+    private $firstName;
+
+    /**
+     * @ORM\Column(type="string", length=45, nullable=true)
+     */
+    private $lastName;
+
+    /**
+     * @ORM\Column(type="string", length=45, nullable=true)
+     */
+    private $phone;
+
+    /**
      * User constructor.
      * @param $username
      */
