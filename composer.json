@@ -1,7 +1,7 @@
 {
     "require": {
         "symfony/security-bundle": "^5.4",
-        "lexik/jwt-authentication-bundle": "^2.14",
+        "lexik/jwt-authentication-bundle": "^2.16",
         "symfony/form": "^5.4",
         "symfony/orm-pack": "^2.2",
         "sensio/framework-extra-bundle": "^6.2",

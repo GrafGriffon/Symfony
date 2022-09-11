@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "25e8c46e8d8bcdd9deac8f30713ab2fe",
+    "content-hash": "2cd517aa72721bc0ec3656f14db0e5db",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1807,16 +1807,16 @@
         },
         {
             "name": "lexik/jwt-authentication-bundle",
-            "version": "v2.14.4",
+            "version": "v2.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lexik/LexikJWTAuthenticationBundle.git",
-                "reference": "b08d174fc979e12f609ad075e49b46a9e30ecfac"
+                "reference": "0a0922a2442c52724c09deb099b263300cc12d54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/b08d174fc979e12f609ad075e49b46a9e30ecfac",
-                "reference": "b08d174fc979e12f609ad075e49b46a9e30ecfac",
+                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/0a0922a2442c52724c09deb099b263300cc12d54",
+                "reference": "0a0922a2442c52724c09deb099b263300cc12d54",
                 "shasum": ""
             },
             "require": {
@@ -1833,7 +1833,8 @@
                 "symfony/property-access": "^4.4|^5.3|^6.0",
                 "symfony/security-bundle": "^4.4|^5.3|^6.0",
                 "symfony/security-core": "^4.4|^5.3|^6.0",
-                "symfony/security-http": "^4.4|^5.3|^6.0"
+                "symfony/security-http": "^4.4|^5.3|^6.0",
+                "symfony/translation-contracts": "^1.0|^2.0|^3.0"
             },
             "conflict": {
                 "symfony/console": "<4.4"
@@ -1910,7 +1911,7 @@
             ],
             "support": {
                 "issues": "https://github.com/lexik/LexikJWTAuthenticationBundle/issues",
-                "source": "https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.14.4"
+                "source": "https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.16.0"
             },
             "funding": [
                 {
@@ -1922,7 +1923,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-04T23:33:23+00:00"
+            "time": "2022-06-12T16:22:12+00:00"
         },
         {
             "name": "namshi/jose",
@@ -6306,5 +6307,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

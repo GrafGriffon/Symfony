@@ -5,82 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c2e0db2-78a6-4fa3-8152-9c063aa323a2" name="Changes" comment="new commit">
-      <change afterPath="$PROJECT_DIR$/app/migrations/Version20220812070831.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Controller/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/packages/security.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/packages/sensio_framework_extra.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Controller/ApiController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Controller/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/packages/security.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/Version20220127064039.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/Version20220127065149.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/css/addcategory.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/css/addproduct.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/css/footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/css/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/css/product.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/css/register.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/api/CategoryController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/api/ProductController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/api/UserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/forms/AccountController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/forms/CategoryController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/forms/ProductController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/forms/UserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/pages/AdminController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/pages/CatalogController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/pages/IndexController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/pages/UserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/security/ApiLoginController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/security/RegistrationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/security/SecurityController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/security/UserAuthSecurityController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/AppFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/Load_001_CategoryFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/Load_100_ProductsFixures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/Load_200_UserFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/Load_400_PriceHistFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/Load_500_CountHistFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/Load_600_SupplyFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/Category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/CountHist.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/PriceHist.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/Products.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/Supply.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/CategoryForm.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/ProductForm.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/RegistrationFormType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/UserForm.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Handler/AddCountHistoryHandler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Handler/AddPriceHistoryHandler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Handler/GetSubcategories.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/CategoryRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/CountHistRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/PriceHistRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/ProductsRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/SupplyRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/UserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/UsersRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Validation/AbstractValidator.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Validation/CategoryValidator.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Validation/ProductValidator.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/categories.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/main.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/base.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/css/navbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/footer.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/formsadding/addCategory.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/formsadding/addProduct.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/formsadding/addUser.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/header.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index/products.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/registration/register.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/security/login.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +59,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/app/.env" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/composer.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/config/packages/security.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/config/routes.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/config/services.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/ApiController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/AuthController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Entity/User.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docker/nginx/Dockerfile" root0="FORCE_HIGHLIGHTING" />
@@ -226,11 +174,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "/home/garfgriffon/PhpstormProjects/Symfony_proj/app/src/Entity"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;/home/garfgriffon/PhpstormProjects/Symfony_proj/app/src/Entity&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/Entity" />
