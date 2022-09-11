@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.39">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>578</IntrospectionStateNumber>
+      <IntrospectionStateNumber>599</IntrospectionStateNumber>
       <ServerVersion>12.11</ServerVersion>
       <StartupTime>1662892869</StartupTime>
       <TimeZones>true ACDT
@@ -1400,7 +1400,7 @@ true posixrules
 13158||10|C|G
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
-      <IntrospectionStateNumber>578</IntrospectionStateNumber>
+      <IntrospectionStateNumber>607</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4614,7 +4614,7 @@ true posixrules
     <schema id="245" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>578</IntrospectionStateNumber>
+      <IntrospectionStateNumber>607</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>276</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4643,27 +4643,33 @@ true posixrules
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="250" parent="249" name="version">
+    <table id="250" parent="245" name="users">
+      <ObjectId>16567</ObjectId>
+      <StateNumber>600</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="251" parent="249" name="version">
       <DataType>varchar(191)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>490</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="251" parent="249" name="executed_at">
+    <column id="252" parent="249" name="executed_at">
       <DataType>timestamp(0)|0s</DataType>
       <DefaultExpression>NULL::timestamp without time zone</DefaultExpression>
       <Position>2</Position>
       <StateNumber>490</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="252" parent="249" name="execution_time">
+    <column id="253" parent="249" name="execution_time">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
       <StateNumber>490</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="253" parent="249" name="doctrine_migration_versions_pkey">
+    <index id="254" parent="249" name="doctrine_migration_versions_pkey">
       <ColNames>version</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16389</ObjectId>
@@ -4675,13 +4681,96 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="254" parent="249" name="doctrine_migration_versions_pkey">
+    <key id="255" parent="249" name="doctrine_migration_versions_pkey">
       <ColNames>version</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16390</ObjectId>
       <Primary>1</Primary>
       <StateNumber>490</StateNumber>
       <UnderlyingIndexId>16389</UnderlyingIndexId>
+    </key>
+    <column id="256" parent="250" name="id">
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>600</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="257" parent="250" name="username">
+      <DataType>varchar(25)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="258" parent="250" name="password">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="259" parent="250" name="email">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="260" parent="250" name="first_name">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>NULL::character varying</DefaultExpression>
+      <Position>5</Position>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="261" parent="250" name="last_name">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>NULL::character varying</DefaultExpression>
+      <Position>6</Position>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="262" parent="250" name="phone">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>NULL::character varying</DefaultExpression>
+      <Position>7</Position>
+      <StateNumber>600</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="263" parent="250" name="roles">
+      <Comment>(DC2Type:array)</Comment>
+      <DataType>text|0s</DataType>
+      <Position>8</Position>
+      <StateNumber>600</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="264" parent="250" name="users_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16576</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>600</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="265" parent="250" name="uniq_1483a5e9f85e0677">
+      <ColNames>username</ColNames>
+      <ObjectId>16578</ObjectId>
+      <StateNumber>601</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="266" parent="250" name="users_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16577</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>600</StateNumber>
+      <UnderlyingIndexId>16576</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

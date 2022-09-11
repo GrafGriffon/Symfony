@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Entity;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 /**
@@ -9,114 +10,154 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User implements UserInterface
 {
+    public const ROLES = [self::ROLE_ADMIN, self::ROLE_USER];
+    public const ROLE_ADMIN = 'ROLE_ADMIN';
+    public const ROLE_USER = 'ROLE_USER';
+
     /**
      * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    private int $id;
     /**
      * @ORM\Column(type="string", length=25, unique=true)
      */
     private $username;
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=false)
      */
-    private $password;
+    private string $password;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string", length=45, nullable=false, unique=true)
      */
-    private $email;
+    private string $email;
 
     /**
-     * @ORM\Column(type="string", length=45, nullable=true)
+     * @ORM\Column(type="string", length=45, nullable=false)
      */
-    private $firstName;
+    private string $firstName;
 
     /**
-     * @ORM\Column(type="string", length=45, nullable=true)
+     * @ORM\Column(type="string", length=45, nullable=false)
      */
-    private $lastName;
+    private string $lastName;
 
     /**
-     * @ORM\Column(type="string", length=45, nullable=true)
+     * @ORM\Column(type="string", length=45, nullable=false)
      */
-    private $phone;
+    private string $phone;
 
     /**
-     * User constructor.
-     * @param $username
+     * @ORM\Column(type="array", nullable=true)
      */
-    public function __construct($username)
+    private array $roles = [];
+
+    public function __construct($username, $email, $firstName, $lastName, $phone = null)
     {
+        $this->email = $email;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
         $this->username = $username;
+        $this->roles = ['ROLE_USER'];
+        $this->phone= $phone;
     }
 
-    /**
-     * @return string
-     */
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->username;
     }
 
-    /**
-     * @param mixed $username
-     */
-    public function setUsername($username): void
+    public function setUsername(string $username): void
     {
         $this->username = $username;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSalt()
     {
         return null;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getPassword()
+    public function getPassword(): ?string
     {
         return $this->password;
     }
 
-    /**
-     * @param $password
-     */
     public function setPassword($password)
     {
         $this->password = $password;
     }
-    /**
-     * @return mixed
-     */
-    public function getEmail()
+
+    public function getEmail(): string
     {
         return $this->email;
     }
 
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email): void
+    public function setEmail(string $email): void
     {
         $this->email = $email;
     }
 
-    /**
-     * @return array|string[]
-     */
-    public function getRoles()
+    public function getRoles(): ?array
     {
-        return array('ROLE_USER');
+        return $this->roles;
     }
 
     public function eraseCredentials()
     {
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName(string $firstName): self
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    public function getLastName(): string
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName(string $lastName): self
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    public function getPhone(): ?string
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(?string $phone): self
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function setRoles(?array $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->getUsername();
     }
 }
