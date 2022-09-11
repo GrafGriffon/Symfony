@@ -150,9 +150,4 @@ class ApiController extends AbstractController
 
         return $request;
     }
-
-    public function testAction()
-    {
-        return $this->setStatusCode(200)->response([]);
-    }
 }
