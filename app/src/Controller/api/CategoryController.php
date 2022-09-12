@@ -2,6 +2,7 @@
 
 namespace App\Controller\api;
 
+use OpenApi\Annotations\Response;
 use App\Entity\Category;
 use App\Repository\CategoryRepository;
 use App\Repository\UserRepository;
@@ -81,9 +82,9 @@ class CategoryController extends AbstractController
             }
 
             $category = (new Category())
-            ->setTitle($request->get('title'))
-            ->setParent($repository->find($request->get('parent')))
-            ->setLevel($repository->find($request->get('parent'))->getLevel() + 1);
+                ->setTitle($request->get('title'))
+                ->setParent($repository->find($request->get('parent')))
+                ->setLevel($repository->find($request->get('parent'))->getLevel() + 1);
             $entityManager->persist($category);
             $entityManager->flush();
 

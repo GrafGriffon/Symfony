@@ -168,6 +168,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/doctrine-messenger" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/redis-messenger" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/amqp-messenger" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/nelmio/api-doc-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/zircote/swagger-php" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

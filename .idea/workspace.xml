@@ -4,46 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c2e0db2-78a6-4fa3-8152-9c063aa323a2" name="Changes" comment="new commit 23/02/2022">
-      <change afterPath="$PROJECT_DIR$/app/config/packages/mailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Command/AllCustomCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Command/CreateCountCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Command/CreatePriceCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Command/CreateProductsCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Command/ImportCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Controller/api/NotificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Controller/forms/NotificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/DTO/ProductDto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Entity/Notification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Form/NotificationForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Handler/ExternalHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Handler/SendMailHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Message/SmsNotification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/MessageHandler/SmsNotificationHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Repository/ExternalRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/formsadding/addNotification.html.twig" afterDir="false" />
+    <list default="true" id="6c2e0db2-78a6-4fa3-8152-9c063aa323a2" name="Changes" comment="new commit 01/03/2022">
       <change beforePath="$PROJECT_DIR$/.idea/Symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Symfony.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9617c8c-5226-4048-9f22-70e05ef6efbe/storage_v2/_src_/database/shopdb.9AEryg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.env" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/docker-compose.override.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/packages/mailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/packages/mailer.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/Version20220127064039.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/Version20220127065149.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Command/AllCustomCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Command/AllCustomCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Command/CreateCountCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Command/CreateCountCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Command/CreatePriceCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Command/CreatePriceCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Command/CreateProductsCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Command/CreateProductsCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Command/ImportCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Command/ImportCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Controller/api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/api/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/api/SupplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/api/SupplyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/pages/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/pages/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/Supply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/Supply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/api/NotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/api/NotificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Controller/api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/api/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/DTO/ProductDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/DTO/ProductDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Handler/ExternalHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Handler/ExternalHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Message/SmsNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Message/SmsNotification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/MessageHandler/SmsNotificationHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/MessageHandler/SmsNotificationHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/ca.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/ca.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/client-cert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/client-cert.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/public_key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/public_key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/server-cert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/server-cert.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/deprecations/test_fixtures/vendor/doctrine/foo/Bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/deprecations/test_fixtures/vendor/doctrine/foo/Bar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/deprecations/test_fixtures/vendor/doctrine/foo/Baz.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/deprecations/test_fixtures/vendor/doctrine/foo/Baz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/Context/ContextInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/Context/ContextInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/Context/NullContext.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/Context/NullContext.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/Context/RequestStackContext.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/Context/RequestStackContext.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/Exception/AssetNotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/Exception/AssetNotFoundException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/Exception/ExceptionInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/Exception/ExceptionInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/Exception/InvalidArgumentException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/Exception/InvalidArgumentException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/Exception/LogicException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/Exception/LogicException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/Exception/RuntimeException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/Exception/RuntimeException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/Package.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/Package.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/PackageInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/PackageInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/Packages.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/Packages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/PathPackage.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/PathPackage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/UrlPackage.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/UrlPackage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/VersionStrategy/EmptyVersionStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/VersionStrategy/EmptyVersionStrategy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/VersionStrategy/JsonManifestVersionStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/VersionStrategy/JsonManifestVersionStrategy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/VersionStrategy/RemoteJsonManifestVersionStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/VersionStrategy/RemoteJsonManifestVersionStrategy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/VersionStrategy/StaticVersionStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/VersionStrategy/StaticVersionStrategy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/VersionStrategy/VersionStrategyInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/VersionStrategy/VersionStrategyInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/asset/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/asset/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,52 +113,65 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/nginx/nginx.conf" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Form/UploadForm.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Controller/security/ApiLoginController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Command/CreateProductsCommand.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/config/packages/notifier.yaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Entity/Products.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/var/log/dev.log" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/docker/nginx/Dockerfile" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/config/services.yaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/templates/error.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/docker/nginx/default.conf" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Security/AuthenticationEntryPoint.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1cebe851-93dc-45ca-9eb6-9e3583414df4/console.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/.env" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/composer.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/config/bundles.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/config/routes.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/config/packages/framework.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/config/packages/nelmio_api_doc.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/config/packages/notifier.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/config/packages/security.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/config/routes.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/config/routes/annotations.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/config/services.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Command/AllCustomCommand.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Command/CreateCountCommand.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Command/CreateProductsCommand.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Command/ImportCommand.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/api/CategoryController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/api/HistController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/api/NotificationController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/api/ProductController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/api/SupplyController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/forms/CategoryController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/forms/NotificationController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/forms/SupplyController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/Controller/pages/CatalogController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/Controller/pages/IndexController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Controller/forms/CategoryController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/.env" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Entity/Category.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/templates/formsadding/addProduct.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/Load_001_CategoryFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Form/ProductForm.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Command/ImportCommand.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/templates/formsadding/uploadFile.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Controller/api/SupplyController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1cebe851-93dc-45ca-9eb6-9e3583414df4/console.sql" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Handler/TableHandler.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/templates/index/index.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/Load_100_ProductsFixures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/security/ApiLoginController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Controller/security/UserAuthSecurityController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/AppFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/Load_001_CategoryFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/Load_100_ProductsFixures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/Load_400_PriceHistFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/DataFixtures/Load_500_CountHistFixtures.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Controller/security/UserAuthSecurityController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/templates/index/products.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/templates/security/login.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/config/packages/security.yaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Command/AllCustomCommand.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Entity/Category.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Entity/CountHist.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Entity/Products.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/Entity/Supply.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Tests/FirstControllerTest.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/templates/registration/register.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Controller/api/CategoryController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/src/Controller/forms/SupplyController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/src/Entity/User.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Form/ProductForm.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Form/UploadForm.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Handler/SendMailHandler.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Handler/TableHandler.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Message/SmsNotification.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/MessageHandler/SmsNotificationHandler.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Security/AuthenticationEntryPoint.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/Tests/FirstControllerTest.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/templates/error.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/templates/formsadding/addProduct.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/templates/formsadding/uploadFile.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/templates/index/index.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/templates/index/products.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/templates/registration/register.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/templates/security/login.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/var/log/dev.log" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker/nginx/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker/nginx/default.conf" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/nginx/nginx.conf" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -295,6 +340,8 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/doctrine-messenger" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/redis-messenger" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/amqp-messenger" />
+      <path value="$PROJECT_DIR$/app/vendor/nelmio/api-doc-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/zircote/swagger-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="23uwgIIcD5xICZMwzMpDzwNtDzL" />
@@ -303,24 +350,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="postgresql" />
-    <property name="DefaultYamlCloudFormationTemplate" value="AWS CloudFormation Template (YAML)" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/app/vendor/symfony/http-foundation/Request.php&#10;/home/illia_kurbatski/Symfony/app/var/log/dev.log" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/Handler" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="Template Data Languages" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/illia_kurbatski/PhpstormProjects/NordGold-API"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/Handler" />
@@ -432,7 +467,53 @@
       <workItem from="1645795650888" duration="5140000" />
       <workItem from="1646028076111" duration="10319000" />
       <workItem from="1646057400670" duration="2702000" />
-      <workItem from="1646115556900" duration="3452000" />
+      <workItem from="1646115556900" duration="3817000" />
+      <workItem from="1646121461075" duration="890000" />
+      <workItem from="1646236140759" duration="442000" />
+      <workItem from="1646288996859" duration="1380000" />
+      <workItem from="1646325956958" duration="56000" />
+      <workItem from="1646326464621" duration="19000" />
+      <workItem from="1646915582685" duration="11000" />
+      <workItem from="1647067172601" duration="11921000" />
+      <workItem from="1647169217740" duration="3161000" />
+      <workItem from="1647239782464" duration="40000" />
+      <workItem from="1647432870636" duration="585000" />
+      <workItem from="1647598738135" duration="25000" />
+      <workItem from="1647931044551" duration="742000" />
+      <workItem from="1647942374294" duration="1893000" />
+      <workItem from="1648457469739" duration="4294000" />
+      <workItem from="1648537511452" duration="1553000" />
+      <workItem from="1648540384966" duration="71000" />
+      <workItem from="1648544493787" duration="706000" />
+      <workItem from="1648546128846" duration="1266000" />
+      <workItem from="1648639093660" duration="3348000" />
+      <workItem from="1648736268730" duration="720000" />
+      <workItem from="1648775949430" duration="16000" />
+      <workItem from="1648800367121" duration="1233000" />
+      <workItem from="1648803428803" duration="4688000" />
+      <workItem from="1649148703916" duration="29000" />
+      <workItem from="1649165360339" duration="666000" />
+      <workItem from="1649317812429" duration="85000" />
+      <workItem from="1649682875203" duration="4177000" />
+      <workItem from="1649751445896" duration="3517000" />
+      <workItem from="1649760709332" duration="25000" />
+      <workItem from="1649847958127" duration="615000" />
+      <workItem from="1649852911887" duration="26000" />
+      <workItem from="1649930386573" duration="1315000" />
+      <workItem from="1651305491106" duration="2807000" />
+      <workItem from="1651396620148" duration="50000" />
+      <workItem from="1651841981962" duration="1326000" />
+      <workItem from="1652370857144" duration="86000" />
+      <workItem from="1652419613286" duration="28000" />
+      <workItem from="1652419921804" duration="53000" />
+      <workItem from="1652878018731" duration="3383000" />
+      <workItem from="1652940613156" duration="71000" />
+      <workItem from="1653909633745" duration="1440000" />
+      <workItem from="1653976781779" duration="921000" />
+      <workItem from="1653987367747" duration="630000" />
+      <workItem from="1655370124093" duration="647000" />
+      <workItem from="1657224707569" duration="292000" />
+      <workItem from="1657225571145" duration="899000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1644234064073</created>
@@ -490,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645599334169</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="new commit 01/03/2022">
+      <created>1646120815140</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1646120815140</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +601,8 @@
     <MESSAGE value="new commit" />
     <MESSAGE value="new commit 10/02/2022" />
     <MESSAGE value="new commit 23/02/2022" />
-    <option name="LAST_COMMIT_MESSAGE" value="new commit 23/02/2022" />
+    <MESSAGE value="new commit 01/03/2022" />
+    <option name="LAST_COMMIT_MESSAGE" value="new commit 01/03/2022" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

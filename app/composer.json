@@ -15,6 +15,7 @@
         "guzzlehttp/guzzle": "^7.4",
         "knplabs/knp-paginator-bundle": "^5.8",
         "lexik/jwt-authentication-bundle": "^2.14",
+        "nelmio/api-doc-bundle": "^4.8",
         "phpoffice/phpspreadsheet": "^1.21",
         "ramsey/uuid": "^4.2",
         "sensio/framework-extra-bundle": "^6.2",

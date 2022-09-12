@@ -8,14 +8,8 @@ use App\Entity\Products;
 use App\Repository\CategoryRepository;
 use App\Repository\ExternalRepository;
 use App\Repository\ProductsRepository;
-use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
-use Symfony\Component\Console\Attribute\AsCommand;
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
-use Doctrine\DBAL\Driver\Statement as DriverStatement;
 
 
 class ExternalHandler

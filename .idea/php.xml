@@ -164,6 +164,8 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/doctrine-messenger" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/redis-messenger" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/amqp-messenger" />
+      <path value="$PROJECT_DIR$/app/vendor/nelmio/api-doc-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/zircote/swagger-php" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">

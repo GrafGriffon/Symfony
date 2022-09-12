@@ -15,6 +15,11 @@ app_logout:
   path: /logout
   methods: GET
 
+app.swagger_ui:
+  path: /api/doc
+  methods: GET
+  defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+
   # if the action is implemented as the __invoke() method of the
   # controller class, you can skip the '::method_name' part:
   # controller: App\Controller\BlogController

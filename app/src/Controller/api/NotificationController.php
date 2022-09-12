@@ -30,7 +30,6 @@ class NotificationController extends AbstractController
      */
     public function addMessage(Request $request, EntityManagerInterface $entityManager, SendMailHandler $handler, UserRepository $repository)
     {
-
         try {
             $request = $this->transformJsonBody($request);
             $counter = 0;
