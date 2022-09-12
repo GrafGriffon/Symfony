@@ -4,6 +4,13 @@
     <link href="{{ asset('css/index.css') }}" rel="stylesheet" />
     {{ include('header.html.twig')}}
     <title>Main page</title>
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+
     {% macro list(categories, idParent) %}
         {% import _self as tree %}
         <ul class="ui list">

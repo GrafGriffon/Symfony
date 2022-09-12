@@ -2,12 +2,14 @@
 
 namespace App\Controller\api;
 
+use OpenApi\Annotations\Response;
 use App\Entity\Category;
 use App\Repository\CategoryRepository;
 use App\Repository\UserRepository;
 use App\Validation\CategoryValidator;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
+use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,8 +28,9 @@ class CategoryController extends AbstractController
      * @return JsonResponse
      * @Route("/categories", name="categories", methods={"GET"})
      */
-    public function getCategories(PaginatorInterface $paginator, Request $request, CategoryRepository $categoryRepository)
+    public function getCategories(PaginatorInterface $paginator, Request $request, CategoryRepository $categoryRepository, LoggerInterface $logger)
     {
+//        $logger->
         $paginator = $categoryRepository->getListCategory($categoryRepository, $paginator, $request);
         $categories = array();
         foreach ($paginator as $category) {
@@ -79,9 +82,9 @@ class CategoryController extends AbstractController
             }
 
             $category = (new Category())
-            ->setTitle($request->get('title'))
-            ->setParent($repository->find($request->get('parent')))
-            ->setLevel($repository->find($request->get('parent'))->getLevel() + 1);
+                ->setTitle($request->get('title'))
+                ->setParent($repository->find($request->get('parent')))
+                ->setLevel($repository->find($request->get('parent'))->getLevel() + 1);
             $entityManager->persist($category);
             $entityManager->flush();
 

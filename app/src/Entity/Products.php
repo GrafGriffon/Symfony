@@ -19,6 +19,15 @@ class Products
     #[ORM\Column(type: 'string', length: 255)]
     private $name;
 
+    #[ORM\Column(type: 'integer', nullable: true)]
+    private $article;
+
+    #[ORM\Column(name: 'date_create', type: 'date', nullable: true)]
+    private $dateCreate;
+
+    #[ORM\Column(name: 'date_update', type: 'date', nullable: true)]
+    private $dateUpdate;
+
     #[ORM\Column(type: 'integer')]
     #[Assert\Length(min: 2, max: 3)]
     private $statusCount;
@@ -36,7 +45,7 @@ class Products
     private $supply;
 
     #[ORM\ManyToOne(targetEntity: "Category", inversedBy: "product")]
-    #[ORM\JoinColumn(name:"category", onDelete: 'CASCADE')]
+    #[ORM\JoinColumn(name: "category", onDelete: 'CASCADE')]
     private $category;
 
     public function __construct()
@@ -51,6 +60,7 @@ class Products
     {
         return $this->supply;
     }
+
     public function addSupply(Supply $sup): self
     {
         if (!$this->supply->contains($sup)) {
@@ -58,6 +68,7 @@ class Products
         }
         return $this;
     }
+
     public function removeSupply(Supply $sup): self
     {
         $this->supply->removeElement($sup);
@@ -68,7 +79,8 @@ class Products
 //    #[ORM\JoinColumn(name: "parent", referencedColumnName: "id", nullable: true)]
 //    private $parent;
 
-    public function __toString() {
+    public function __toString()
+    {
         return $this->id;
     }
 
@@ -96,6 +108,42 @@ class Products
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getArticle(): int
+    {
+        return $this->article;
+    }
+
+    public function setArticle(int $article): self
+    {
+        $this->article = $article;
+
+        return $this;
+    }
+
+    public function getDateCreate(): \DateTimeInterface
+    {
+        return $this->dateCreate;
+    }
+
+    public function setDateCreate(\DateTimeInterface $date): self
+    {
+        $this->dateCreate = $date;
+
+        return $this;
+    }
+
+    public function getDateUpdate(): \DateTimeInterface
+    {
+        return $this->dateUpdate;
+    }
+
+    public function setDateUpdate(\DateTimeInterface $date): self
+    {
+        $this->dateUpdate = $date;
 
         return $this;
     }

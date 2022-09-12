@@ -11,6 +11,10 @@ use App\Repository\UserRepository;
 use App\Validation\ProductValidator;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
+use OpenApi\Annotations\Parameter;
+use OpenApi\Annotations\Response;
+use OpenApi\Annotations\Schema;
+use OpenApi\Annotations\MediaType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -27,6 +31,46 @@ class ProductController extends AbstractController
     /**
      * @Route("/products", name="posts", methods={"GET"})
      */
+    /**
+     * @OpenApi\Annotations\Get(
+     ** path="/api/company/{company_id}",
+     *   tags={"Company"},
+     *security={
+     *{
+     *"passport": {}},
+     *},
+     *   summary="Company Detail",
+     *   operationId="companydetails",
+     *   @Parameter(
+     *      name="company_id",
+     *      in="path",
+     *      required=true,
+     *      @Schema(
+     *           type="integer"
+     *      )
+     *   ),
+     *   @Response(
+     *      response=200,
+     *       description="Success",
+     *      @MediaType(
+     *          mediaType="application/json",
+     *      )
+     *   ),
+     *   @Response(
+     *      response=401,
+     *       description="Unauthenticated"
+     *   ),
+     *   @Response(
+     *      response=404,
+     *      description="not found"
+     *   ),
+     *      @Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      )
+     *)
+     **/
+
     public function getProducts(ProductsRepository $productRepository): JsonResponse
     {
         $data = $productRepository->findAll();
@@ -78,9 +122,7 @@ class ProductController extends AbstractController
                 'errors' => "Data no valid",
             ];
             return new JsonResponse($data, 422);
-
         }
-
     }
 
     /**
